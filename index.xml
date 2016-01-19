@@ -20,30 +20,5 @@
 </description>
     </item>
     
-    <item>
-      <title>Ma première note</title>
-      <link>http://alexisjanvier.github.io/notes/myFirstNote/</link>
-      <pubDate>Sat, 19 Sep 2015 23:20:30 +0200</pubDate>
-      
-      <guid>http://alexisjanvier.github.io/notes/myFirstNote/</guid>
-      <description>
-
-&lt;h1 id=&#34;this-is-a-note:373a72dbe8a6407a522146bdd0e9e7f5&#34;&gt;This is a note&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ls on&lt;/li&gt;
-&lt;li&gt;ls 2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-    phpinfo();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is the end&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
