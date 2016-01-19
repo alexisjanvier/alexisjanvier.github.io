@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/</link>
-    <description>Recent content on alexisjanvier.net</description>
+    <title>Notes on alexisjanvier.net</title>
+    <link>http://alexisjanvier.github.io/notes/</link>
+    <description>Recent content in Notes on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
-    <lastBuildDate>Sun, 27 Sep 2015 20:15:24 +0200</lastBuildDate>
-    <atom:link href="http://alexisjanvier.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>about</title>
-      <link>http://alexisjanvier.github.io/about/</link>
-      <pubDate>Sun, 27 Sep 2015 20:15:24 +0200</pubDate>
-      
-      <guid>http://alexisjanvier.github.io/about/</guid>
-      <description>&lt;p&gt;This is not &amp;lsquo;Nam. This is my blog.&lt;/p&gt;
-</description>
-    </item>
+    <lastBuildDate>Sat, 19 Sep 2015 23:20:30 +0200</lastBuildDate>
+    <atom:link href="http://alexisjanvier.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ma première note</title>
