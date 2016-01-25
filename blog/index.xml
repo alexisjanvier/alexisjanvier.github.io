@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/</link>
-    <description>Recent content on alexisjanvier.net</description>
+    <title>Blogs on alexisjanvier.net</title>
+    <link>http://alexisjanvier.github.io/blog/</link>
+    <description>Recent content in Blogs on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
     <lastBuildDate>Mon, 25 Jan 2016 14:19:00 +0100</lastBuildDate>
-    <atom:link href="http://alexisjanvier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://alexisjanvier.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Road to Caen</title>
@@ -73,16 +73,6 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 &lt;li&gt;&lt;a name=&#34;ecrire&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://alistapart.com/column/write-what-you-know-now&#34;&gt;Write What You Know (Now)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a name=&#34;hate_spa&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://medium.com/@stilkov/why-i-hate-your-single-page-app-f08bb4ff9134#.bzfye46vx&#34;&gt;Why I hate your Single Page App&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>http://alexisjanvier.github.io/about/</link>
-      <pubDate>Sun, 27 Sep 2015 20:15:24 +0200</pubDate>
-      
-      <guid>http://alexisjanvier.github.io/about/</guid>
-      <description>&lt;p&gt;This is not &amp;lsquo;Nam. This is my blog.&lt;/p&gt;
 </description>
     </item>
     
