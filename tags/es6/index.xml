@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/blog/</link>
-    <description>Recent content in Blogs on alexisjanvier.net</description>
+    <title>Es6 on alexisjanvier.net</title>
+    <link>http://alexisjanvier.github.io/tags/es6/</link>
+    <description>Recent content in Es6 on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
     <lastBuildDate>Tue, 09 Feb 2016 11:35:26 +0100</lastBuildDate>
-    <atom:link href="http://alexisjanvier.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://alexisjanvier.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bootstraping du projet ES6</title>
@@ -648,162 +648,6 @@ C&amp;rsquo;est donc une espèce d&amp;rsquo;usine Lego à produire du code fina
 &lt;p&gt;Tout le code du bootstrap de &lt;code&gt;Road to Caen&lt;/code&gt; est également disponible sur Github : &lt;a href=&#34;https://github.com/alexisjanvier/road-to-caen/releases/tag/v0.1.0&#34;&gt;alexisjanvier/road-to-caen&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;La prochaine étape, donc le prochain post, abordera la question du &lt;strong&gt;déploiement continu du projet&lt;/strong&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Est-ce du snobisme que de vouloir une vraie console sous Windows ?</title>
-      <link>http://alexisjanvier.github.io/blog/une_console_sous_windows/</link>
-      <pubDate>Mon, 01 Feb 2016 11:35:26 +0100</pubDate>
-      
-      <guid>http://alexisjanvier.github.io/blog/une_console_sous_windows/</guid>
-      <description>
-
-&lt;p&gt;Dans mon cas, c’est parce que l’environnement de travail du client ne pouvait être autre chose qu’un Windows 7 sur un VM (avec des droits d’administrateur tout de même), le tout derrière un firewall peu conciliant. La mission prévoyait un back en PHP 5.6 avec du Silex, et un peu de JavaScript sur la partie front.&lt;/p&gt;
-
-&lt;h1 id=&#34;pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows&lt;/h1&gt;
-
-&lt;p&gt;En tout premier lieu, j&amp;rsquo;ai installé Atom, par habitude, même si je ne l&amp;rsquo;ai pas encore utilisé pour du développement PHP.&lt;br /&gt;
-Hormis un petit souci initial (pour installer Atom, j’ai eu besoin d&amp;rsquo;une version 4.5 de .net et de l&amp;rsquo;espace disque allant avec), l’installation officielle se passe bien.&lt;br /&gt;
-Dans le cas ou l&amp;rsquo;on est derrière un Firewall, il faut juste penser à éditer ou à ajouter le fichier &lt;code&gt;.atom/.apmrc&lt;/code&gt; si l&amp;rsquo;on veut installer quelques plug-ins (atom-beautify, linter, linter-php,…).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# $HOME/.atom/.apmrc
-
-http-proxy = &amp;quot;http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT&amp;quot;
-https-proxy = &amp;quot;http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT&amp;quot;
-proxy = &amp;quot;http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Je suis ensuite passé à l’environnement PHP. Ma vm était livrée avec un Xampp d’origine. Après avoir ajouté la Path, j’ai bien accès à PHP depuis le terminal, pardon, &lt;strong&gt;l&amp;rsquo;invite de commande&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/windevPhpPath.png&#34; alt=&#34;Add Php to your path&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;C&amp;rsquo;était donc confiant que je lançais l&amp;rsquo;installateur de &lt;strong&gt;Composer&lt;/strong&gt;. Trop confiant peut-être.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/erroComposerInstallExe_1.PNG&#34; alt=&#34;Composer windows installer&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Je suis donc passé par l&amp;rsquo;invite de commande, mais sans obtenir de meilleurs résultats :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/composeurInvitCommande.PNG&#34; alt=&#34;Composer install from cli&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Je décidais de repousser à plus tard cette question de &lt;strong&gt;Composer&lt;/strong&gt; pour me lancer dans l&amp;rsquo;installation de Git. Suivant mon idée initiale, je commençais par l’utilitaire officiel Github. Si l’installation elle-même fut sans problème, impossible ensuite de se connecter à Github. Ceci était sans aucun doute dû au Firewall.&lt;/p&gt;
-
-&lt;p&gt;Bref, la matinée commençait plutôt mal, et les bonnes vannes sur Windows me revenaient en tête au galop.&lt;/p&gt;
-
-&lt;h1 id=&#34;babun:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Babun&lt;/h1&gt;
-
-&lt;p&gt;Il me semblait pourtant me rappeler d&amp;rsquo;une possible solution à mon problème, une promesse de console sous Windows que j&amp;rsquo;avais dû noter quelque part&amp;hellip; Grâce à &lt;a href=&#34;https://raindrop.io&#34;&gt;Raindrop&lt;/a&gt;, j&amp;rsquo;ai retrouvé ce projet: &lt;a href=&#34;http://babun.github.io/&#34;&gt;Babun&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Voici la description officielle du projet : &amp;ldquo;&lt;em&gt;Would you like to use a linux-like console on a Windows host without a lot of fuzz? Try out babun!&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Une fois l&amp;rsquo;installation terminée sans problème, je lançais un premier test &lt;code&gt;badun check&lt;/code&gt;, me rappelant que j&amp;rsquo;étais derrière un firewall.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/babunCheckFirewall.PNG&#34; alt=&#34;Babun check fail&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Il a donc juste fallu configurer le proxy dans le fichier &lt;code&gt;~/.babunrc&lt;/code&gt; pour que tout semble fonctionner.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export http_proxy=http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export no_proxy=localhost
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/babunCheckFirewallPROXY.PNG&#34; alt=&#34;Babun check success&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;J&amp;rsquo;enchainais donc avec l&amp;rsquo;installation de PHP grâce au gestionnaire de package de Babun &lt;strong&gt;Pact&lt;/strong&gt; (et à l&amp;rsquo;ajout d&amp;rsquo;un fichier ~/.wgetrc pour déclarer le proxy pour la commande &lt;code&gt;wget&lt;/code&gt; parfois utilisée par Pact), puis Composer, le tout sans erreur. Reconnaissant envers &lt;a href=&#34;https://twitter.com/tombujok&#34;&gt;Tomek Bujok&lt;/a&gt;, j&amp;rsquo;avais un environnement PHP fonctionnel et une console déjà bien configurée (git, zsh, &amp;hellip;). J&amp;rsquo;ai même récupéré quelques .dotfile (qu&amp;rsquo;il ne faut pas oublié de convertir en ISO 8859-1), installé &lt;strong&gt;tmux&lt;/strong&gt;, et j&amp;rsquo;avais presque l&amp;rsquo;impression d&amp;rsquo;être sur mon Mac.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/tmuxMakeServer.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;oui-mais:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Oui, mais&lt;/h1&gt;
-
-&lt;p&gt;Il était enfin temps de se mettre eu travail : je lançais un &lt;code&gt;composer requier silex&lt;/code&gt;, et là, &lt;em&gt;badabun&lt;/em&gt; :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/fuckedBabun.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Je passe les détails des recherches effectuées sur ce qui était un nouveau type d&amp;rsquo;erreur dans ma vie de développeur PHP, mais la conclusion en fut que le problème provenait de la version de Cygwin utilisée par Babun : la version 32 bits sur mon Windows 64 bits sur lequel était installé Symantec Endpoint Protection en 64 bits &amp;hellip; Qu&amp;rsquo;à cela ne tienne, il suffisait de passer le Cygwin en 64 bit. Sauf que cette version n&amp;rsquo;est pas, et ne sera à priori pas, supporté par Babun.&lt;/p&gt;
-
-&lt;p&gt;Ne me restait plus qu&amp;rsquo;une solution logique : se passer de Babun, et n&amp;rsquo;utiliser que le &lt;a href=&#34;https://www.cygwin.com/&#34;&gt;Cygwin&lt;/a&gt;. Et ce fut effectivement la bonne solution. Babun n&amp;rsquo;est au final qu&amp;rsquo;une surcouche de configuration et d&amp;rsquo;utilitaires au-dessus de Cygwin, qui lui ne dispose ni d&amp;rsquo;un gestionnaire de package (il faut repasser par l&amp;rsquo;installateur Windows si on a oublié quelque chose), ni d&amp;rsquo;une configuration simplifiée du proxy, et qui n&amp;rsquo;est pas directement livré avec zsh, oh-my-zsh, git, etc &amp;hellip;&lt;br /&gt;
-Au final, et avec un peu de temps, j&amp;rsquo;ai installé un environnement PHP et un composer global cette fois-ci fonctionnels, git, zsh, tmux, &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/finalCygwin.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;pour-finir:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Pour finir&lt;/h1&gt;
-
-&lt;p&gt;Rien de bien révolutionnaire dans ce post de blog: Cygwin est un projet déjà ancien. Mais c&amp;rsquo;est sans aucun doute un outil à connaitre, que l&amp;rsquo;on soit habituellement sous Windows ou pas. Le projet Babun est aussi intéressant, et accélère grandement l&amp;rsquo;installation d&amp;rsquo;une console compléte &amp;hellip; tant que la version de Cygwin 32 n&amp;rsquo;est pas un problème.&lt;/p&gt;
-
-&lt;p&gt;Mais quel rapport a donc tout cela avec le snobisme ? Et bien, il se trouve que c&amp;rsquo;est une question (il s&amp;rsquo;agissait d&amp;rsquo;ailleurs plus d&amp;rsquo;une affirmation) qui m&amp;rsquo;a été posée lors de ma quête vers une console fonctionnelle. La réponse évidente était que sans Cygwin, je ne pouvais pas installer Composer. Alors certes oui, j&amp;rsquo;aurais pu installer les librairies Silex et autres dépendance à la main. Mais on est en 2016, et je ne suis pas certain que mon tarif horaire soit suffisamment bas pour se lancer dans une telle perte de temps. Et plus important, j&amp;rsquo;ai mieux à faire.&lt;/p&gt;
-
-&lt;p&gt;Mais j&amp;rsquo;aimerais pour terminer ce post donner une encore bien meilleure réponse, lue à la fin du chapitre &lt;strong&gt;Orthogonality&lt;/strong&gt; du livre &lt;strong&gt;The Pragmatic Programmer&lt;/strong&gt; de &lt;strong&gt;Andrew Hunt et David Thomas&lt;/strong&gt; :&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Challenges : &amp;ldquo; Consider the difference between large GUI-oriented tools typically found on Windows systems and small but combinable command line utilities used at shell prompts. Which set is more orthogonal, and why? Which set is easier to combine with other tools to meet new challenges ? &amp;ldquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Road to Caen</title>
-      <link>http://alexisjanvier.github.io/blog/road_to_caen_le_projet/</link>
-      <pubDate>Mon, 25 Jan 2016 14:19:00 +0100</pubDate>
-      
-      <guid>http://alexisjanvier.github.io/blog/road_to_caen_le_projet/</guid>
-      <description>
-
-&lt;p&gt;C’est un peu une mise en pratique de la politique de &lt;a href=&#34;#rural_offshore&#34;&gt;rural offshore&lt;/a&gt; chère à Marmelab. Non, ce nouveau blog ne sera pas le journal de mon déménagement, mais ce projet de retour en province me semble un moment propice pour améliorer ma compétence en communication.&lt;br /&gt;
-À paris, c’est trop facile : tous ces meetups, ces conférences, ces collègues de travail&amp;hellip; Non pas que je risque de me retrouver seul dans le désert à Caen, mais pour garder cet esprit de partage parisien, je me prépare sans regret à devoir autant donner que recevoir.
-Communiquer activement donc, en commençant par ce blog. Et puis écrire c&amp;rsquo;est sans doute &lt;a href=&#34;#ecrire&#34;&gt;une vraie bonne habitude&lt;/a&gt;, même si ce que l’on écrit n’a rien de révolutionnaire.
-Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a href=&#34;http://www.meetup.com/fr-FR/Coding-School-Meetup-Group&#34;&gt;Coding School&lt;/a&gt;, de la &lt;a href=&#34;http://www.meetup.com/fr-FR/Fabrique-de-services-Normandy-Frenchtech/&#34;&gt;fabrique de services&lt;/a&gt;, du &lt;a href=&#34;http://www.forum-digital.fr/&#34;&gt;forum digital&lt;/a&gt;, du &lt;a href=&#34;http://www.club-agile-caen.fr/&#34;&gt;club agile de Caen&lt;/a&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h1 id=&#34;une-application-pour-déménager:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Une application pour déménager&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Road to Caen&lt;/em&gt;&lt;/strong&gt;, c’est le nom de mon nouveau side project. Une des premières choses à faire quand on déménage, c’est de penser à un nouvel appartement. Et c’est plutôt sympa de chercher un appartement en province quand on vient de Paris, on se rend compte qu’on n’est pas obligé de donner un bras pour avoir un logement. Le projet ne va pas consister en une sorte de mashup d’annonces immobilières, mais devra aider à trouver la bonne localisation de cet appartement. La qualité de la localisation va dépendre de critères plus ou moins subjectifs, mais c’est une des qualités des sides projects : on est toujours d’équerre avec le product owner.&lt;/p&gt;
-
-&lt;p&gt;Ces critères seront donc :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Le collège et l’école de rattachement de l’adresse&lt;/strong&gt;: j’ai deux filles. Il n’est ici aucunement question de remettre en cause le principe de la carte scolaire et l’importance de l’école publique. Il se trouve que ce principe nous a plongés dans des affres de déception, voire de colère sur Paris. C’est donc un point important.&lt;/li&gt;
-&lt;li&gt;Ensuite, &lt;strong&gt;la distance à des points notables&lt;/strong&gt;, comme la gare (le principe du rural shore, c’est aussi d’être rapidement sur Paris), les espaces de coworking, les salles de concert, les marchés, les écoles de musique, les bars à baby…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Cette application devra aussi permettre de :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;sauvegarder des adresses&lt;/li&gt;
-&lt;li&gt;évaluer/noter les adresses (selon leur correspondance aux critères précédents)&lt;/li&gt;
-&lt;li&gt;l&amp;rsquo;ouvrir à une agence afin vérifier la note de localisation d’une éventuelle proposition de location.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;planning-technique:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Planning technique&lt;/h1&gt;
-
-&lt;p&gt;Un side project, c’est aussi l’occasion de tester des nouvelles techno, ou comme ce sera en partie le cas ici, de faire le point sur celles que l’on est sensé maitriser. Voici donc les objectifs techniques, plus ou moins pragmatiques :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Se baser sur de l’&lt;strong&gt;open-data&lt;/strong&gt; : l’idée est de mettre en œuvre un maximum de données normandes, plus ou moins librement et facilement disponibles.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Serveless&lt;/strong&gt; : Je ne suis pas fan du terme, parce qu’au bout du compte, il y a forcement des serveurs quelque part. Mais ce ne sera pas les miens.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile first&lt;/strong&gt; et &lt;strong&gt;offline&lt;/strong&gt; : A priori, l’utilisation classique de l’application sera sur mobile dans le rue en visite d’appartement, sans forcément avoir une bonne connexion (c’est comment la 4 g à Caen ?)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SPA&lt;/strong&gt; : j’ai trouvé très pertinent l’article de &lt;a href=&#34;#hate_spa&#34;&gt;Stefan Tilkov&lt;/a&gt;. Mais connaissant bien l’utilisateur final de l’application, une single page fera très bien l’affaire.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ES6&lt;/strong&gt; : tout le code sera en JavaScript, en profitant au maximum de l’ES6&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;React&lt;/strong&gt; et &lt;strong&gt;Redux&lt;/strong&gt; (ou pas) : je trouve intéressantes toutes les discussions actuelles sur la &lt;a href=&#34;https://medium.com/search?q=javascript%20fatigue&#34;&gt;fatigue javascript&lt;/a&gt;… Alors, faire du React/Redux pour faire du React/Redux ? Oui, un peu, ne serait-ce que parce que cela correspond au bootstrap actuel des projets &lt;a href=&#34;http://marmelab.com/&#34;&gt;Marmelab&lt;/a&gt;. Mais ce sera peut-être l’occasion d’y trouver une non-pertinence.&lt;/li&gt;
-&lt;li&gt;Il faudra persister des données (sauvegarde d’adresses, points favoris), synchroniser ces données entre plusieurs devices, et que cela puisse se faire offline. Je pense donc tester quelques services du genre de &lt;a href=&#34;https://www.firebase.com&#34;&gt;Firebase&lt;/a&gt;, &lt;a href=&#34;http://pouchdb.com/&#34;&gt;pouchdb&lt;/a&gt; ou &lt;a href=&#34;http://aws.amazon.com/fr/cognito/&#34;&gt;Amazon Cognito&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;road-to-caen:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Road to Caen&lt;/h1&gt;
-
-&lt;p&gt;Pour finir ce post, pourquoi Road de Caen ? Et bien en référence au &lt;strong&gt;Road to Rouen&lt;/strong&gt; de &lt;em&gt;Supergrass&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;iframe src=&#34;https://embed.spotify.com/?uri=spotify:album:7HBzTTfJhW9sis8yvgxmL6&amp;view=coverart&#34; width=&#34;300&#34; height=&#34;380&#34; frameborder=&#34;0&#34; allowtransparency=&#34;true&#34;&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Il se trouve que je pense que tous les Normands dansent sur de la pop anglaise (ma femme est de Saint-Lô). Je suis pour ma part manceau, et si par malheurs nous avions déménagé au Mans, je l’aurais appelé &lt;a href=&#34;https://open.spotify.com/album/2bU6BaHfovn3rvxxxHSkWd&#34;&gt;&lt;strong&gt;&lt;em&gt;The arguments for Le Mans&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; ou &lt;a href=&#34;https://open.spotify.com/album/2eOu9QDLP2MoO04ZtII2Vm&#34;&gt;&lt;strong&gt;&lt;em&gt;New Day Rising In Le Mans&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Dans mon prochain post, j’aborderais le bootstrap du projet, et la mise en place du MVP : les collèges liés à une adresse à Caen.&lt;/p&gt;
-
-&lt;h1 id=&#34;références:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Références&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a name=&#34;rural_offshore&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://marmelab.com/blog/2015/06/11/iteration-agile.html&#34;&gt;L&amp;rsquo;itération agile : entre SSII et agence, un nouveau mode de prestation informatique&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a name=&#34;ecrire&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://alistapart.com/column/write-what-you-know-now&#34;&gt;Write What You Know (Now)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a name=&#34;hate_spa&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://medium.com/@stilkov/why-i-hate-your-single-page-app-f08bb4ff9134#.bzfye46vx&#34;&gt;Why I hate your Single Page App&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
