@@ -22,7 +22,7 @@
 
 &lt;p&gt;L’un des objectifs du projet est de réaliser une application &lt;strong&gt;serverless&lt;/strong&gt;. Pour &lt;strong&gt;&lt;em&gt;Road to Caen&lt;/em&gt;&lt;/strong&gt;, ce ne devrait pour l’instant pas être compliqué, l’application ne consistant qu’en une application JavaScript. Il suffira donc d’héberger les fichiers statiques sur un Bucket S3, configuré pour pouvoir servir ses fichiers en HTTP.&lt;/p&gt;
 
-&lt;p&gt;La manipulation est très simple, et &lt;a href=&#34;http://docs.aws.amazon.com/fr_fr/AmazonS3/latest/dev/WebsiteHosting.html&#34;&gt;la documentation&lt;/a&gt; permet de rapidement mettre en place notre « *infrastructure* »&lt;/p&gt;
+&lt;p&gt;La manipulation est très simple, et &lt;a href=&#34;http://docs.aws.amazon.com/fr_fr/AmazonS3/latest/dev/WebsiteHosting.html&#34;&gt;la documentation&lt;/a&gt; permet de rapidement mettre en place notre « infrastructure »&lt;/p&gt;
 
 &lt;p&gt;Je vais juste revenir sur les points qui me semblent les plus importants.&lt;/p&gt;
 
@@ -154,7 +154,7 @@ install:
 
 &lt;h1 id=&#34;déploiement-continu:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Déploiement continu&lt;/h1&gt;
 
-&lt;p&gt;Pour finir, on va ensuite automatiser le déploiement du code sur notre Bucket S3, lorsque la PR passée &lt;em&gt;au vert&lt;/em&gt; sur Travis va être mérgée sur la branch master. Pour cela, j&amp;rsquo;utilise &lt;a href=&#34;https://snap-ci.com&#34;&gt;&lt;strong&gt;Snap CI&lt;/strong&gt;&lt;/a&gt; (mais il en existe d&amp;rsquo;autres), qui est également gratuit pour les dépôt git public. L&amp;rsquo;interface est bien réalisé, et permet &lt;strong&gt;&lt;em&gt;pipeline&lt;/em&gt;&lt;/strong&gt; d&amp;rsquo;étapes, dont celle permettant de déployer sur S3. On peut aussi lancer les tests une dernière fois avant de déployer, au cas où &amp;hellip;&lt;/p&gt;
+&lt;p&gt;Pour finir, on va ensuite automatiser le déploiement du code sur notre Bucket S3, lorsque la PR passée &lt;em&gt;au vert&lt;/em&gt; sur Travis va être mergée sur la branch master. Pour cela, j&amp;rsquo;utilise &lt;a href=&#34;https://snap-ci.com&#34;&gt;&lt;strong&gt;Snap CI&lt;/strong&gt;&lt;/a&gt; (mais il en existe d&amp;rsquo;autres), qui est également gratuit pour les dépôts git public. L&amp;rsquo;interface est bien réalisée, et permet de monter un &lt;strong&gt;&lt;em&gt;pipeline&lt;/em&gt;&lt;/strong&gt; d&amp;rsquo;étapes, dont celle permettant de déployer sur S3. On peut aussi lancer les tests une dernière fois avant de déployer, au cas où &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/rtc_deployment/snapCiRTC.png&#34; alt=&#34;Road to Caen Pipeline&#34; /&gt;&lt;/p&gt;
 
