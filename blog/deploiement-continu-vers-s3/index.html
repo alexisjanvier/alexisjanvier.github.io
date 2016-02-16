@@ -220,7 +220,7 @@ install:
 
 <h1 id="déploiement-continu:96a87f790f36364b1f853c8d8fae51a3">Déploiement continu</h1>
 
-<p>Pour finir, on va ensuite automatiser le déploiement du code sur notre Bucket S3, lorsque la PR  (passée <em>au vert</em> sur Travis) est mergée sur la branche <strong>master</strong>. Pour cela, j&rsquo;utilise <a href="https://snap-ci.com"><strong>Snap CI</strong></a> (mais il en existe d&rsquo;autres), qui est tout comme Travis gratuit pour les dépôts git public. L&rsquo;interface est bien réalisée, et permet de monter un <strong><em>pipeline</em></strong> d&rsquo;étapes, dont une réalisant le déploiement sur S3. Une étape peut également consistée à lancer les tests une dernière fois avant de déployer, au cas où &hellip;</p>
+<p>Pour finir, on va automatiser le déploiement du code sur notre Bucket S3, lorsque la PR  (passée <em>au vert</em> sur Travis) est mergée sur la branche <strong>master</strong>. Pour cela, j&rsquo;utilise <a href="https://snap-ci.com"><strong>Snap CI</strong></a> (mais il en existe d&rsquo;autres), qui est tout comme Travis gratuit pour les dépôts git public. L&rsquo;interface est bien réalisée, et permet de monter un <strong><em>pipeline</em></strong> d&rsquo;étapes, dont une réalisant le déploiement sur S3. Une étape peut également consistée à lancer les tests une dernière fois avant de déployer, au cas où &hellip;</p>
 
 <p><img src="/images/rtc_deployment/snapCiRTC.png" alt="Road to Caen Pipeline" /></p>
 
