@@ -528,12 +528,15 @@ describe('city', () =&gt; {
 <p>Pour que les tests soient complets, il manque encore les tests fonctionnels. Pour les réaliser, je vais utiliser <a href="http://nightwatchjs.org/">Nightwatch</a>.
 Mais tout d&rsquo;abord, pour faire des tests fonctionnels, on va avoir besoin d&rsquo;un build de prod et d&rsquo;un serveur permettant à Nightwatch d&rsquo;appeler une URL à tester.</p>
 
-<p>L&rsquo;exposition http des fichiers statiques finaux sera assurée par <a href="https://github.com/indexzero/http-server">http-server</a>.  Lors de l&rsquo;execution des tests, il va falloir gérer :
-- 1) le lancement du serveur des statiques
-- 2) le lancement d&rsquo;un serveur <a href="http://www.seleniumhq.org/">selenium</a>
-- 3) l&rsquo;execution des tests
-- 4) l&rsquo;arrêt du selenium
-- 5) l&rsquo;arrêt du serveur de statiques</p>
+<p>L&rsquo;exposition http des fichiers statiques finaux sera assurée par <a href="https://github.com/indexzero/http-server">http-server</a>.  Lors de l&rsquo;execution des tests, il va falloir gérer :</p>
+
+<ul>
+<li>1) le lancement du serveur des statiques</li>
+<li>2) le lancement d&rsquo;un serveur <a href="http://www.seleniumhq.org/">selenium</a></li>
+<li>3) l&rsquo;execution des tests</li>
+<li>4) l&rsquo;arrêt du selenium</li>
+<li>5) l&rsquo;arrêt du serveur de statiques</li>
+</ul>
 
 <p>Cela peut se gérer via les <code>PID</code> des instances de serveurs</p>
 
@@ -545,7 +548,7 @@ stop-static-server: static-server.PID
 	@kill `cat $&lt;` &amp;&amp; rm $&lt;
 </code></pre>
 
-<p>Mais je n&rsquo;aime pas trop cette solution, qui à entre l&rsquo;autre l&rsquo;inconveniant de laisser trainer des fichiers <code>.PID</code> en cas d&rsquo;échec des tests, empêchant la relance des serveurs après correctif.<br />
+<p>Mais je n&rsquo;aime pas trop cette solution, qui présente entre l&rsquo;autre l&rsquo;inconvéniant de laisser trainer des fichiers <code>.PID</code> en cas d&rsquo;échec des tests, empêchant la relance des serveurs après correctif.<br />
 J&rsquo;ai trouvé une solution plus élégante consistant à utiliser <a href="http://pm2.keymetrics.io/">PM2</a> pour gérer les serveurs lors des tests. J&rsquo;ai soumis cette solution à mes <a href="http://marmelab.com/">éminents collègues marmelabien</a> et en fonction de leurs retours, je ferais un petit post spécifique sur l&rsquo;utilisation de PM2 en environnement de développement et de tests.
 Mais voici ce que cela donne pour <em>Road to Caen</em> :</p>
 

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Serveless on alexisjanvier.net</title>
+    <link>http://alexisjanvier.github.io/tags/serveless/</link>
+    <description>Recent content in Serveless on alexisjanvier.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>mon copyright</copyright>
+    <lastBuildDate>Mon, 15 Feb 2016 11:35:26 +0100</lastBuildDate>
+    <atom:link href="http://alexisjanvier.github.io/tags/serveless/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Déploiement continu vers S3</title>
+      <link>http://alexisjanvier.github.io/blog/deploiement-continu-vers-s3/</link>
+      <pubDate>Mon, 15 Feb 2016 11:35:26 +0100</pubDate>
+      
+      <guid>http://alexisjanvier.github.io/blog/deploiement-continu-vers-s3/</guid>
+      <description>
+
+&lt;h1 id=&#34;hébergement-du-site-sur-s3:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Hébergement du site sur S3&lt;/h1&gt;
+
+&lt;p&gt;L’un des objectifs du projet est de réaliser une application &lt;strong&gt;serverless&lt;/strong&gt;. Pour &lt;strong&gt;&lt;em&gt;Road to Caen&lt;/em&gt;&lt;/strong&gt;, ce ne devrait pour l’instant pas être compliqué, l’application ne consistant qu’en une application JavaScript. Il suffira donc d’héberger les fichiers statiques sur un Bucket S3, configuré pour pouvoir servir ses fichiers en HTTP.&lt;/p&gt;
+
+&lt;p&gt;La manipulation est très simple, et &lt;a href=&#34;http://docs.aws.amazon.com/fr_fr/AmazonS3/latest/dev/WebsiteHosting.html&#34;&gt;la documentation&lt;/a&gt; permet de rapidement mettre en place notre « *infrastructure* »&lt;/p&gt;
+
+&lt;p&gt;Je vais juste revenir sur les points qui me semblent les plus importants.&lt;/p&gt;
+
+&lt;h3 id=&#34;nommage-du-bucket:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;- Nommage du bucket&lt;/h3&gt;
+
+&lt;p&gt;Il faut donner le même nom au bucket que l’url du site. Par exemple pour une url &lt;strong&gt;mon_site. mon_domaine.com&lt;/strong&gt;, on nommera le bucket&amp;hellip; &lt;strong&gt;mon_site. mon_domaine.com&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;création-d-un-utilisateur-iam-et-d-une-policies-spécifique-pour-le-bucket:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;- Création d&amp;rsquo;un utilisateur IAM, et d&amp;rsquo;une &lt;em&gt;Policies&lt;/em&gt; spécifique pour le bucket&lt;/h3&gt;
+
+&lt;p&gt;Ensuite, il est &lt;strong&gt;obligatoire&lt;/strong&gt; de créer un utilisateur IAM pour interagir avec notre bucket, afin d’être certain de ne jamais utiliser &lt;strong&gt;l’aws_access_key_id&lt;/strong&gt; et &lt;strong&gt;l’aws_secret_access_key&lt;/strong&gt; de l’utilisateur principal du compte AWS (le root en quelque sorte). Certains s’en sont mordu les doigts.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Policies appliquée au user IAM
+ {
+    &amp;quot;Version&amp;quot;: &amp;quot;2012-10-17&amp;quot;,
+    &amp;quot;Statement&amp;quot;: [
+        {
+            &amp;quot;Sid&amp;quot;: &amp;quot;Stmt1453976839000&amp;quot;,
+            &amp;quot;Effect&amp;quot;: &amp;quot;Allow&amp;quot;,
+            &amp;quot;Action&amp;quot;: [
+                &amp;quot;s3:PutObject&amp;quot;,
+                &amp;quot;s3:PutObjectAcl&amp;quot;,
+                &amp;quot;s3:DeleteObject&amp;quot;,
+                &amp;quot;s3:AddObject&amp;quot;
+            ],
+            &amp;quot;Resource&amp;quot;: [
+                &amp;quot;arn:aws:s3:::mon_site.mon_domaine.com/*&amp;quot;
+            ]
+        }
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ajout-d-une-entrée-cnam-au-dns-de-son-domaine:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;- Ajout d&amp;rsquo;une entrée CNAM au DNS de son domaine&lt;/h3&gt;
+
+&lt;p&gt;Il faut ajouter une entrée CNAM dans les réglages DNS de son domaine.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mon_site CNAME mon_site.mon_domaine.com.s3-website-eu-west-1.amazonaws.com.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;déploiement-manuel:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Déploiement manuel&lt;/h1&gt;
+
+&lt;p&gt;Avant de configurer le déploiement automatique, on va tout de même configurer de quoi déployer &lt;em&gt;à la main&lt;/em&gt; notre code sur S3.&lt;br /&gt;
+Pour cela, il faut tout d&amp;rsquo;abord installer &lt;a href=&#34;https://aws.amazon.com/fr/cli/&#34;&gt;awscli&lt;/a&gt;. Sur un Mac, on peut utiliser &lt;a href=&#34;http://brew.sh/&#34;&gt;brew&lt;/a&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install awscli
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ensuite, on configure un profil spécifique au projet, avec les identifiants de l&amp;rsquo;utilisateur IAM précédemment créé :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ~/.aws/config
+
+[default]
+output = json
+region = us-east-1
+
+[profile IAM_USER_PROFIL]
+output = json
+region = eu-west-1
+aws_access_key_id = IAM_USER_ACCESS_KEY_ID
+aws_secret_access_key = IAM_USER_SECRET_ACCESS_KEY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ne reste plus qu&amp;rsquo;à ajouter une nouvelle commande à notre fichier &lt;code&gt;makefile&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# makefile
+
+deploy: build
+    @ echo &#39;* Deploy web app on S3 *&#39;
+    aws s3 --profile=IAM_USER_PROFIL --region=eu-west-1 sync ./build/ s3://YOUR-BUCKET-NAME/ --delete
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;worflow-de-développement-et-intégration-continue:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Worflow de développement et intégration continue&lt;/h1&gt;
+
+&lt;p&gt;Le worflow de développement sera très simple; c&amp;rsquo;est d&amp;rsquo;ailleurs celui que je trouve le meilleur, même sur les projets plus importants :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;une branche master qui contient le code envoyé sur S3,&lt;/li&gt;
+&lt;li&gt;une nouvelle branche par feature développée.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Une fois la feature terminée, elle est intégrée à la branche master via une pull request. C&amp;rsquo;est à ce moment que l&amp;rsquo;on va parler d&amp;rsquo;intégration continue, car cette PR va être automatiquement testée sur &lt;a href=&#34;https://travis-ci.org&#34;&gt;&lt;strong&gt;Travis&lt;/strong&gt;&lt;/a&gt;. Il suffit pour cela d&amp;rsquo;ajouter le fichier &lt;code&gt;.travis.yml&lt;/code&gt; à la racine du projet :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# .travis.yml
+
+language: node_js
+
+node_js:
+    - &amp;quot;5.5&amp;quot;
+
+env:
+    - CXX=g++-4.8
+
+sudo: true
+
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - gcc-4.8
+            - g++-4.8
+
+cache:
+    directories:
+        - node_modules
+
+before_script:
+    - cp -n ./config/test.js.dist ./config/test.js | true
+
+# xvfb va permettre de lancer firefox, utilisé pour les tests fonctionnels
+# sans avoir à installer un serveur X
+before_install:
+    - &amp;quot;export DISPLAY=:99.0&amp;quot;
+    - &amp;quot;sh -e /etc/init.d/xvfb start&amp;quot;
+
+install:
+    - &amp;quot;make --silent install&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour un projet en node, Travis va lancer le script de test déclaré dans le &lt;code&gt;package.json&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;scripts&amp;quot;: {
+  &amp;quot;test&amp;quot;: &amp;quot;make test&amp;quot;
+},
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il faut évidemment déclarer le dépôt git du projet sur le site de Travis, pour qu&amp;rsquo;il puisse mettre en place les webhooks lui permettant de savoir quand une PR est réalisée. Travis est gratuit pour les dépôts publics.&lt;/p&gt;
+
+&lt;h1 id=&#34;déploiement-continu:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Déploiement continu&lt;/h1&gt;
+
+&lt;p&gt;Pour finir, on va ensuite automatiser le déploiement du code sur notre Bucket S3, lorsque la PR passée &lt;em&gt;au vert&lt;/em&gt; sur Travis va être mérgée sur la branch master. Pour cela, j&amp;rsquo;utilise &lt;a href=&#34;https://snap-ci.com&#34;&gt;&lt;strong&gt;Snap CI&lt;/strong&gt;&lt;/a&gt; (mais il en existe d&amp;rsquo;autres), qui est également gratuit pour les dépôt git public. L&amp;rsquo;interface est bien réalisé, et permet &lt;strong&gt;&lt;em&gt;pipeline&lt;/em&gt;&lt;/strong&gt; d&amp;rsquo;étapes, dont celle permettant de déployer sur S3. On peut aussi lancer les tests une dernière fois avant de déployer, au cas où &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/rtc_deployment/snapCiRTC.png&#34; alt=&#34;Road to Caen Pipeline&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;c-est-prêt:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;C&amp;rsquo;est prêt !&lt;/h1&gt;
+
+&lt;p&gt;Et voilà, on peut commencer à coder en ES6 sur une &lt;strong&gt;nouvelle branche&lt;/strong&gt;. Une fois une feature terminée et &lt;strong&gt;testée&lt;/strong&gt;, on propose le code via une &lt;strong&gt;PR sur Github&lt;/strong&gt;. Si les tests passent tous sur &lt;strong&gt;Travis&lt;/strong&gt;, on &lt;strong&gt;merge&lt;/strong&gt; la PR, et &lt;strong&gt;&lt;em&gt;tadam&lt;/em&gt;&lt;/strong&gt;, le code est directement envoyé sur &lt;strong&gt;S3&lt;/strong&gt; grâce à &lt;strong&gt;Snap CI&lt;/strong&gt; et accessible à la terre entière.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

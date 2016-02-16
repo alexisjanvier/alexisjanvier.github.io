@@ -462,12 +462,15 @@ describe(&#39;city&#39;, () =&amp;gt; {
 &lt;p&gt;Pour que les tests soient complets, il manque encore les tests fonctionnels. Pour les réaliser, je vais utiliser &lt;a href=&#34;http://nightwatchjs.org/&#34;&gt;Nightwatch&lt;/a&gt;.
 Mais tout d&amp;rsquo;abord, pour faire des tests fonctionnels, on va avoir besoin d&amp;rsquo;un build de prod et d&amp;rsquo;un serveur permettant à Nightwatch d&amp;rsquo;appeler une URL à tester.&lt;/p&gt;
 
-&lt;p&gt;L&amp;rsquo;exposition http des fichiers statiques finaux sera assurée par &lt;a href=&#34;https://github.com/indexzero/http-server&#34;&gt;http-server&lt;/a&gt;.  Lors de l&amp;rsquo;execution des tests, il va falloir gérer :
-- 1) le lancement du serveur des statiques
-- 2) le lancement d&amp;rsquo;un serveur &lt;a href=&#34;http://www.seleniumhq.org/&#34;&gt;selenium&lt;/a&gt;
-- 3) l&amp;rsquo;execution des tests
-- 4) l&amp;rsquo;arrêt du selenium
-- 5) l&amp;rsquo;arrêt du serveur de statiques&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;exposition http des fichiers statiques finaux sera assurée par &lt;a href=&#34;https://github.com/indexzero/http-server&#34;&gt;http-server&lt;/a&gt;.  Lors de l&amp;rsquo;execution des tests, il va falloir gérer :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1) le lancement du serveur des statiques&lt;/li&gt;
+&lt;li&gt;2) le lancement d&amp;rsquo;un serveur &lt;a href=&#34;http://www.seleniumhq.org/&#34;&gt;selenium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3) l&amp;rsquo;execution des tests&lt;/li&gt;
+&lt;li&gt;4) l&amp;rsquo;arrêt du selenium&lt;/li&gt;
+&lt;li&gt;5) l&amp;rsquo;arrêt du serveur de statiques&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Cela peut se gérer via les &lt;code&gt;PID&lt;/code&gt; des instances de serveurs&lt;/p&gt;
 
@@ -479,7 +482,7 @@ stop-static-server: static-server.PID
 	@kill `cat $&amp;lt;` &amp;amp;&amp;amp; rm $&amp;lt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Mais je n&amp;rsquo;aime pas trop cette solution, qui à entre l&amp;rsquo;autre l&amp;rsquo;inconveniant de laisser trainer des fichiers &lt;code&gt;.PID&lt;/code&gt; en cas d&amp;rsquo;échec des tests, empêchant la relance des serveurs après correctif.&lt;br /&gt;
+&lt;p&gt;Mais je n&amp;rsquo;aime pas trop cette solution, qui présente entre l&amp;rsquo;autre l&amp;rsquo;inconvéniant de laisser trainer des fichiers &lt;code&gt;.PID&lt;/code&gt; en cas d&amp;rsquo;échec des tests, empêchant la relance des serveurs après correctif.&lt;br /&gt;
 J&amp;rsquo;ai trouvé une solution plus élégante consistant à utiliser &lt;a href=&#34;http://pm2.keymetrics.io/&#34;&gt;PM2&lt;/a&gt; pour gérer les serveurs lors des tests. J&amp;rsquo;ai soumis cette solution à mes &lt;a href=&#34;http://marmelab.com/&#34;&gt;éminents collègues marmelabien&lt;/a&gt; et en fonction de leurs retours, je ferais un petit post spécifique sur l&amp;rsquo;utilisation de PM2 en environnement de développement et de tests.
 Mais voici ce que cela donne pour &lt;em&gt;Road to Caen&lt;/em&gt; :&lt;/p&gt;
 
