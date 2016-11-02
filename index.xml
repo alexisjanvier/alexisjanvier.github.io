@@ -2,13 +2,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/</link>
+    <link>http://alexisjanvier.github.io/index.xml</link>
     <description>Recent content on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
-    <lastBuildDate>Mon, 15 Feb 2016 11:35:26 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 02 Nov 2016 21:35:26 +0100</lastBuildDate>
     <atom:link href="http://alexisjanvier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yarn</title>
+      <link>http://alexisjanvier.github.io/blog/yarn/</link>
+      <pubDate>Wed, 02 Nov 2016 21:35:26 +0100</pubDate>
+      
+      <guid>http://alexisjanvier.github.io/blog/yarn/</guid>
+      <description>
+
+&lt;p&gt;&lt;code&gt;npm&lt;/code&gt; n&amp;rsquo;est sans doute pas l&amp;rsquo;outil le plus handicapant de la stack javascript. C&amp;rsquo;est même franchement bien. Mais, c&amp;rsquo;est vrai, c&amp;rsquo;est parfois lent,
+parfois surprenant dans un worflow d&amp;rsquo;intégration continue, et le &lt;code&gt;npm shrinkwrap&lt;/code&gt; est parfois plus source de problèmes que de solutions. Ce que promet &lt;a href=&#34;https://yarnpkg.com/&#34;&gt;Yarn&lt;/a&gt;: de la rapidité et une bonne gestion des versions des modules.&lt;/p&gt;
+
+&lt;h2 id=&#34;premier-test-en-local&#34;&gt;Premier test en local&lt;/h2&gt;
+
+&lt;p&gt;Yarn s&amp;rsquo;installe très simplement avec &amp;hellip; &lt;code&gt;npm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm i -g yarn
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Je vais tester sur un projet ayant beaucoup (trop ;) ) de dépendances: le &lt;a href=&#34;https://github.com/marmelab/javascript-boilerplate&#34;&gt;boilereplate javascript&lt;/a&gt; de Marmelab.
+Pour une première installation, après clonage du repo, voilà le comparatif:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm: 1min 30s
+yarn: 1min 17s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rien de très fulgurant. Le projet n&amp;rsquo;avait pas de fichier &lt;code&gt;npm-shrinkwrap.json&lt;/code&gt;, ni de fait de &lt;code&gt;yarn.lock&lt;/code&gt;.
+  Après avoir supprimer le répertoire &lt;code&gt;node_modules&lt;/code&gt;, je relance une installation. Maintenant, le résultat est beaucoup plus probant.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm: 1min 11s
+yarn: 15s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Effectivement, une fois le cache chauffé, Yarn est vraiment plus rapide&lt;/p&gt;
+
+&lt;h2 id=&#34;yarn-dans-un-docker&#34;&gt;Yarn dans un docker&lt;/h2&gt;
+
+&lt;p&gt;Si npm est un peu lent, c&amp;rsquo;est rarement un problème en cours de développement en local. Par contre, cela peut être plus problématique pour les builds et les tests sur un serveur d&amp;rsquo;intégration continue.
+Je conseille donc l&amp;rsquo;article de Martino Fornasa, &lt;a href=&#34;https://hackernoon.com/using-yarn-with-docker-c116ad289d56#.rz7m1fh58&#34;&gt;Using Yarn with Docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Il s&amp;rsquo;agit d&amp;rsquo;un test très rapide, mais en partie concluant. Je ne pense pas utiliser Yarn sur des projets clients pour le moment.
+Mais comme outil quotidien pour des tests ou des projets perso, oui, sûrement. Je ne suis pas fan de l&amp;rsquo;idée que Facebook soit en train de truster tellement d&amp;rsquo;outils js.
+Et qui sait, cela mettra j&amp;rsquo;espère un coup de fouet à l&amp;rsquo;équipe de npm pour que la v4 revienne avec un gain de performance conséquent.&lt;/p&gt;
+
+&lt;h3 id=&#34;note&#34;&gt;Note&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc#.8dakk7y15&#34;&gt;une cheat-sheet yarn vs npm&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Déploiement continu vers S3</title>
@@ -18,7 +69,7 @@
       <guid>http://alexisjanvier.github.io/blog/deploiement-continu-vers-s3/</guid>
       <description>
 
-&lt;h1 id=&#34;hébergement-du-site-sur-s3:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Hébergement du site sur S3&lt;/h1&gt;
+&lt;h1 id=&#34;hébergement-du-site-sur-s3&#34;&gt;Hébergement du site sur S3&lt;/h1&gt;
 
 &lt;p&gt;L’un des objectifs du projet est de réaliser une application &lt;strong&gt;serverless&lt;/strong&gt;. Pour &lt;strong&gt;&lt;em&gt;Road to Caen&lt;/em&gt;&lt;/strong&gt;, ce ne devrait pour l’instant pas être compliqué, l’application ne consistant qu’en une application JavaScript. Il suffira donc d’héberger les fichiers statiques sur un Bucket S3, configuré pour pouvoir servir ses fichiers en HTTP.&lt;/p&gt;
 
@@ -26,11 +77,11 @@
 
 &lt;p&gt;Je vais juste revenir sur les points qui me semblent les plus importants.&lt;/p&gt;
 
-&lt;h3 id=&#34;nommage-du-bucket:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;- Nommage du bucket&lt;/h3&gt;
+&lt;h3 id=&#34;nommage-du-bucket&#34;&gt;- Nommage du bucket&lt;/h3&gt;
 
 &lt;p&gt;Il faut donner le même nom au bucket que l’url du site. Par exemple pour une url &lt;strong&gt;mon_site. mon_domaine.com&lt;/strong&gt;, on nommera le bucket&amp;hellip; &lt;strong&gt;mon_site. mon_domaine.com&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;création-d-un-utilisateur-iam-et-d-une-policies-spécifique-pour-le-bucket:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;- Création d&amp;rsquo;un utilisateur IAM, et d&amp;rsquo;une &lt;em&gt;Policies&lt;/em&gt; spécifique pour le bucket&lt;/h3&gt;
+&lt;h3 id=&#34;création-d-un-utilisateur-iam-et-d-une-policies-spécifique-pour-le-bucket&#34;&gt;- Création d&amp;rsquo;un utilisateur IAM, et d&amp;rsquo;une &lt;em&gt;Policies&lt;/em&gt; spécifique pour le bucket&lt;/h3&gt;
 
 &lt;p&gt;Ensuite, il est &lt;strong&gt;obligatoire&lt;/strong&gt; de créer un utilisateur IAM pour interagir avec notre bucket, afin d’être certain de ne jamais utiliser &lt;strong&gt;l’aws_access_key_id&lt;/strong&gt; et &lt;strong&gt;l’aws_secret_access_key&lt;/strong&gt; de l’utilisateur principal du compte AWS (le root en quelque sorte). Certains s’en sont mordu les doigts.&lt;/p&gt;
 
@@ -55,14 +106,14 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ajout-d-une-entrée-cnam-au-dns-de-son-domaine:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;- Ajout d&amp;rsquo;une entrée CNAM au DNS de son domaine&lt;/h3&gt;
+&lt;h3 id=&#34;ajout-d-une-entrée-cnam-au-dns-de-son-domaine&#34;&gt;- Ajout d&amp;rsquo;une entrée CNAM au DNS de son domaine&lt;/h3&gt;
 
 &lt;p&gt;Il faut ajouter une entrée CNAM dans les réglages DNS de son domaine.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;mon_site CNAME mon_site.mon_domaine.com.s3-website-eu-west-1.amazonaws.com.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;déploiement-manuel:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Déploiement manuel&lt;/h1&gt;
+&lt;h1 id=&#34;déploiement-manuel&#34;&gt;Déploiement manuel&lt;/h1&gt;
 
 &lt;p&gt;Avant de configurer le déploiement automatique, on va tout de même configurer de quoi déployer &lt;em&gt;à la main&lt;/em&gt; notre code sur S3.&lt;br /&gt;
 Pour cela, il faut tout d&amp;rsquo;abord installer &lt;a href=&#34;https://aws.amazon.com/fr/cli/&#34;&gt;awscli&lt;/a&gt;. Sur un Mac, on peut utiliser &lt;a href=&#34;http://brew.sh/&#34;&gt;brew&lt;/a&gt; :&lt;/p&gt;
@@ -94,7 +145,7 @@ deploy: build
     aws s3 --profile=IAM_USER_PROFIL --region=eu-west-1 sync ./build/ s3://YOUR-BUCKET-NAME/ --delete
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;worflow-de-développement-et-intégration-continue:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Worflow de développement et intégration continue&lt;/h1&gt;
+&lt;h1 id=&#34;worflow-de-développement-et-intégration-continue&#34;&gt;Worflow de développement et intégration continue&lt;/h1&gt;
 
 &lt;p&gt;Le worflow de développement sera très simple; c&amp;rsquo;est d&amp;rsquo;ailleurs celui que je trouve le meilleur, même sur les projets plus importants :&lt;/p&gt;
 
@@ -152,13 +203,13 @@ install:
 
 &lt;p&gt;Il faut évidemment déclarer le dépôt git du projet sur le site de Travis, pour qu&amp;rsquo;il puisse mettre en place les webhooks lui permettant de savoir quand une PR est réalisée. Travis est gratuit pour les dépôts publics.&lt;/p&gt;
 
-&lt;h1 id=&#34;déploiement-continu:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;Déploiement continu&lt;/h1&gt;
+&lt;h1 id=&#34;déploiement-continu&#34;&gt;Déploiement continu&lt;/h1&gt;
 
 &lt;p&gt;Pour finir, on va automatiser le déploiement du code sur notre Bucket S3, lorsque la PR  (passée &lt;em&gt;au vert&lt;/em&gt; sur Travis) est mergée sur la branche &lt;strong&gt;master&lt;/strong&gt;. Pour cela, j&amp;rsquo;utilise &lt;a href=&#34;https://snap-ci.com&#34;&gt;&lt;strong&gt;Snap CI&lt;/strong&gt;&lt;/a&gt; (mais il en existe d&amp;rsquo;autres), qui est tout comme Travis gratuit pour les dépôts git public. L&amp;rsquo;interface est bien réalisée, et permet de monter un &lt;strong&gt;&lt;em&gt;pipeline&lt;/em&gt;&lt;/strong&gt; d&amp;rsquo;étapes, dont une réalisant le déploiement sur S3. Une étape peut également consistée à lancer les tests une dernière fois avant de déployer, au cas où &amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/rtc_deployment/snapCiRTC.png&#34; alt=&#34;Road to Caen Pipeline&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;c-est-prêt:96a87f790f36364b1f853c8d8fae51a3&#34;&gt;C&amp;rsquo;est prêt !&lt;/h1&gt;
+&lt;h1 id=&#34;c-est-prêt&#34;&gt;C&amp;rsquo;est prêt !&lt;/h1&gt;
 
 &lt;p&gt;Et voilà, on peut commencer à coder en ES6 sur une &lt;strong&gt;nouvelle branche&lt;/strong&gt;. Une fois une feature terminée et &lt;strong&gt;testée&lt;/strong&gt;, on propose le code via une &lt;strong&gt;PR sur Github&lt;/strong&gt;. Si les tests passent tous sur &lt;strong&gt;Travis&lt;/strong&gt;, on &lt;strong&gt;merge&lt;/strong&gt; la PR, et &lt;strong&gt;&lt;em&gt;tadam&lt;/em&gt;&lt;/strong&gt;, le code est directement envoyé sur &lt;strong&gt;S3&lt;/strong&gt; grâce à &lt;strong&gt;Snap CI&lt;/strong&gt; et accessible à la terre entière.&lt;/p&gt;
 </description>
@@ -187,7 +238,7 @@ install:
 npm config set save-prefix=&#39;~&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;transpilation-avec-babel:6612d8be89c90440b51740ff705eccc5&#34;&gt;Transpilation avec Babel&lt;/h1&gt;
+&lt;h1 id=&#34;transpilation-avec-babel&#34;&gt;Transpilation avec Babel&lt;/h1&gt;
 
 &lt;p&gt;Je vais utiliser &lt;a href=&#34;https://babeljs.io/&#34;&gt;Babel&lt;/a&gt; pour transpiler le code ES6 en ES5. La version 6 a introduit une nouvelle organisation du projet. Il faut maintenant installer au minimum &lt;strong&gt;babel-core&lt;/strong&gt;, sur lequel vont s&amp;rsquo;appuyer tous les autres modules.&lt;/p&gt;
 
@@ -232,7 +283,7 @@ npm config set save-prefix=&#39;~&#39;
 &lt;p&gt;C&amp;rsquo;est la solution que je vais utiliser (expliquant la déclaration des modules Babel en dépendance de développement, puisque Babel ne sera jamais présent dans le js de production).&lt;br /&gt;
 Et pour cela, nous allons devoir passer par un autre outil : &lt;a href=&#34;https://webpack.github.io/&#34;&gt;&lt;strong&gt;Webpack&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;webpack:6612d8be89c90440b51740ff705eccc5&#34;&gt;Webpack&lt;/h1&gt;
+&lt;h1 id=&#34;webpack&#34;&gt;Webpack&lt;/h1&gt;
 
 &lt;p&gt;Webpack est un « *module bundler* » permettant de gérer notre code es6 écrit en module et générer un fichier final js utilisable dans le navigateur, en effectuant au passage la transpilation ES6 avec Babel.&lt;/p&gt;
 
@@ -349,7 +400,7 @@ module.exports = {
 
 &lt;p&gt;On retrouve au final un fichier &lt;code&gt;index.html&lt;/code&gt; et &lt;code&gt;main.js&lt;/code&gt; dans le répertoire &lt;code&gt;/build/&lt;/code&gt;, que l&amp;rsquo;on peut charger sans erreur dans un navigateur.&lt;/p&gt;
 
-&lt;h1 id=&#34;un-serveur-de-développement:6612d8be89c90440b51740ff705eccc5&#34;&gt;Un serveur de développement&lt;/h1&gt;
+&lt;h1 id=&#34;un-serveur-de-développement&#34;&gt;Un serveur de développement&lt;/h1&gt;
 
 &lt;p&gt;On arrive donc à transpilet notre ES6 dans un fichier unique fichier js, et c&amp;rsquo;est déjà chouette. Mais on ne va pas lancer un build à chaque modifications du code&amp;hellip;&lt;br /&gt;
 Pour éviter cela, on va installer le &lt;strong&gt;webpack-dev-server&lt;/strong&gt;, et en profiter pour faire un makefile afin de faciliter le lancement des commandes (&lt;code&gt;make build&lt;/code&gt; pour lancer un transpilation et &lt;code&gt;make run-dev&lt;/code&gt; pour le lancement du serveur de dev), et permettre à d&amp;rsquo;éventuels autre participants au projet de pouvoir facilement installer tout l&amp;rsquo;environnement de développement (&lt;code&gt;make install&lt;/code&gt;).&lt;/p&gt;
@@ -381,7 +432,7 @@ run-dev: clean-build
 &lt;p&gt;Le &lt;strong&gt;webpack-dev-server&lt;/strong&gt; est très rapide (il charge le code en mémoire) et permet de faire du &lt;em&gt;live-reload&lt;/em&gt; (option &lt;code&gt;–hot&lt;/code&gt;). On transpile maintenant bien le code ES6 en js lisible par le navigateur à la volée.&lt;br /&gt;
 Mais on ne gère que le js, alors que l&amp;rsquo;on veut aussi avoir du css.&lt;/p&gt;
 
-&lt;h1 id=&#34;webpack-et-le-css:6612d8be89c90440b51740ff705eccc5&#34;&gt;Webpack et le css&lt;/h1&gt;
+&lt;h1 id=&#34;webpack-et-le-css&#34;&gt;Webpack et le css&lt;/h1&gt;
 
 &lt;p&gt;Pour gérer le css, on ajoute un nouveau plugin et un nouveau loader (pour du css simple, mais on pourra aussi par la suite &amp;ldquo;&lt;em&gt;pre-processer&lt;/em&gt;&amp;rdquo; du &lt;strong&gt;sass&lt;/strong&gt; par exemple, grace à d&amp;rsquo;autres loaders).&lt;/p&gt;
 
@@ -409,7 +460,7 @@ import &#39;../css/main.css&#39;;
 
 &lt;p&gt;Mais c&amp;rsquo;est comme cela que l&amp;rsquo;on va pouvoir gérer nos css avec Webpack, comme un module js.&lt;/p&gt;
 
-&lt;h1 id=&#34;gestion-des-différents-environnements:6612d8be89c90440b51740ff705eccc5&#34;&gt;Gestion des différents environnements&lt;/h1&gt;
+&lt;h1 id=&#34;gestion-des-différents-environnements&#34;&gt;Gestion des différents environnements&lt;/h1&gt;
 
 &lt;p&gt;Il faut maintenant encore améliorer les choses afin de gérer :&lt;/p&gt;
 
@@ -570,7 +621,7 @@ run-dev: clean-build
     @NODE_ENV=dev ./node_modules/.bin/webpack-dev-server --hot --inline --port=8080
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;les-tests-unitaires:6612d8be89c90440b51740ff705eccc5&#34;&gt;Les tests unitaires&lt;/h1&gt;
+&lt;h1 id=&#34;les-tests-unitaires&#34;&gt;Les tests unitaires&lt;/h1&gt;
 
 &lt;p&gt;On y est presque ! Mais il manque encore les tests unitaires qui seront réalisés avec &lt;a href=&#34;https://mochajs.org/&#34;&gt;mocha&lt;/a&gt; et &lt;a href=&#34;http://chaijs.com/&#34;&gt;chai&lt;/a&gt;.&lt;/p&gt;
 
@@ -611,7 +662,7 @@ describe(&#39;city&#39;, () =&amp;gt; {
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;les-tests-fonctionnels:6612d8be89c90440b51740ff705eccc5&#34;&gt;Les tests fonctionnels&lt;/h1&gt;
+&lt;h1 id=&#34;les-tests-fonctionnels&#34;&gt;Les tests fonctionnels&lt;/h1&gt;
 
 &lt;p&gt;Pour que les tests soient complets, il manque encore les tests fonctionnels. Pour les réaliser, je vais utiliser &lt;a href=&#34;http://nightwatchjs.org/&#34;&gt;Nightwatch&lt;/a&gt;.
 Mais tout d&amp;rsquo;abord, pour faire des tests fonctionnels, on va avoir besoin d&amp;rsquo;un build de prod et d&amp;rsquo;un serveur permettant à Nightwatch d&amp;rsquo;appeler une URL à tester.&lt;/p&gt;
@@ -754,7 +805,7 @@ module.exports = {
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Remarque&lt;/em&gt;&lt;/strong&gt; : &lt;em&gt;Je n&amp;rsquo;ai pas encore trouver comment écrire les tests fonctionnels en ES6 :(&lt;/em&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;la-touche-finale-le-code-styling:6612d8be89c90440b51740ff705eccc5&#34;&gt;La touche finale: le « code styling »&lt;/h1&gt;
+&lt;h1 id=&#34;la-touche-finale-le-code-styling&#34;&gt;La touche finale: le « code styling »&lt;/h1&gt;
 
 &lt;p&gt;Pour terminer cet environnement de développement ES6, on va ajouter un dernier outil permettant d&amp;rsquo;être cohérent sur le code styling du projet : &lt;a href=&#34;http://eslint.org/&#34;&gt;ESLint&lt;/a&gt;&lt;/p&gt;
 
@@ -776,7 +827,7 @@ module.exports = {
 
 &lt;p&gt;J&amp;rsquo;utilise le preset airbnb, qui gère bien l&amp;rsquo;ES6, mais aussi la syntaxe particulière de Redux. Je ne lance pas de tests directement avec ESLint, mais j&amp;rsquo;utilise avec &lt;a href=&#34;https://atom.io/&#34;&gt;ATOM&lt;/a&gt; le plugin &lt;a href=&#34;https://atom.io/packages/linter-eslint&#34;&gt;linter-eslint&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;conclusion:6612d8be89c90440b51740ff705eccc5&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
 
 &lt;p&gt;Alors, &lt;a href=&#34;https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.6bg742tti&#34;&gt;&lt;strong&gt;&lt;em&gt;JavaScript fatigue&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; ? Il est vrai que cette phase de bootstraping est assez longue, et oblige à voir et comprendre pas mal d&amp;rsquo;outils. Un &lt;code&gt;ls&lt;/code&gt; dans le répertoire des &lt;code&gt;node_modules&lt;/code&gt; est plutôt impressionnant ! On est tenté de se dire : &lt;em&gt;tout ça pour générer un (encore) pauvre fichier js final ?&lt;/em&gt;&lt;br /&gt;
 Eh bien oui, mais j&amp;rsquo;oppose à cela plusieurs remarques.&lt;/p&gt;
@@ -818,7 +869,7 @@ C&amp;rsquo;est donc une espèce d&amp;rsquo;usine Lego à produire du code fina
 
 &lt;p&gt;Dans mon cas, c’est parce que l’environnement de travail du client ne pouvait être autre chose qu’un Windows 7 sur un VM (avec des droits d’administrateur tout de même), le tout derrière un firewall peu conciliant. La mission prévoyait un back en PHP 5.6 avec du Silex, et un peu de JavaScript sur la partie front.&lt;/p&gt;
 
-&lt;h1 id=&#34;pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows&lt;/h1&gt;
+&lt;h1 id=&#34;pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows&#34;&gt;Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows&lt;/h1&gt;
 
 &lt;p&gt;En tout premier lieu, j&amp;rsquo;ai installé Atom, par habitude, même si je ne l&amp;rsquo;ai pas encore utilisé pour du développement PHP.&lt;br /&gt;
 Hormis un petit souci initial (pour installer Atom, j’ai eu besoin d&amp;rsquo;une version 4.5 de .net et de l&amp;rsquo;espace disque allant avec), l’installation officielle se passe bien.&lt;br /&gt;
@@ -847,7 +898,7 @@ proxy = &amp;quot;http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT&amp;quot;
 
 &lt;p&gt;Bref, la matinée commençait plutôt mal, et les bonnes vannes sur Windows me revenaient en tête au galop.&lt;/p&gt;
 
-&lt;h1 id=&#34;babun:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Babun&lt;/h1&gt;
+&lt;h1 id=&#34;babun&#34;&gt;Babun&lt;/h1&gt;
 
 &lt;p&gt;Il me semblait pourtant me rappeler d&amp;rsquo;une possible solution à mon problème, une promesse de console sous Windows que j&amp;rsquo;avais dû noter quelque part&amp;hellip; Grâce à &lt;a href=&#34;https://raindrop.io&#34;&gt;Raindrop&lt;/a&gt;, j&amp;rsquo;ai retrouvé ce projet: &lt;a href=&#34;http://babun.github.io/&#34;&gt;Babun&lt;/a&gt;.&lt;/p&gt;
 
@@ -871,7 +922,7 @@ export no_proxy=localhost
 
 &lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/tmuxMakeServer.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;oui-mais:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Oui, mais&lt;/h1&gt;
+&lt;h1 id=&#34;oui-mais&#34;&gt;Oui, mais&lt;/h1&gt;
 
 &lt;p&gt;Il était enfin temps de se mettre eu travail : je lançais un &lt;code&gt;composer requier silex&lt;/code&gt;, et là, &lt;em&gt;badabun&lt;/em&gt; :&lt;/p&gt;
 
@@ -884,7 +935,7 @@ Au final, et avec un peu de temps, j&amp;rsquo;ai installé un environnement PHP
 
 &lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/finalCygwin.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;pour-finir:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Pour finir&lt;/h1&gt;
+&lt;h1 id=&#34;pour-finir&#34;&gt;Pour finir&lt;/h1&gt;
 
 &lt;p&gt;Rien de bien révolutionnaire dans ce post de blog: Cygwin est un projet déjà ancien. Mais c&amp;rsquo;est sans aucun doute un outil à connaitre, que l&amp;rsquo;on soit habituellement sous Windows ou pas. Le projet Babun est aussi intéressant, et accélère grandement l&amp;rsquo;installation d&amp;rsquo;une console compléte &amp;hellip; tant que la version de Cygwin 32 n&amp;rsquo;est pas un problème.&lt;/p&gt;
 
@@ -911,7 +962,7 @@ Au final, et avec un peu de temps, j&amp;rsquo;ai installé un environnement PHP
 Communiquer activement donc, en commençant par ce blog. Et puis écrire c&amp;rsquo;est sans doute &lt;a href=&#34;#ecrire&#34;&gt;une vraie bonne habitude&lt;/a&gt;, même si ce que l’on écrit n’a rien de révolutionnaire.
 Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a href=&#34;http://www.meetup.com/fr-FR/Coding-School-Meetup-Group&#34;&gt;Coding School&lt;/a&gt;, de la &lt;a href=&#34;http://www.meetup.com/fr-FR/Fabrique-de-services-Normandy-Frenchtech/&#34;&gt;fabrique de services&lt;/a&gt;, du &lt;a href=&#34;http://www.forum-digital.fr/&#34;&gt;forum digital&lt;/a&gt;, du &lt;a href=&#34;http://www.club-agile-caen.fr/&#34;&gt;club agile de Caen&lt;/a&gt;&amp;hellip;&lt;/p&gt;
 
-&lt;h1 id=&#34;une-application-pour-déménager:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Une application pour déménager&lt;/h1&gt;
+&lt;h1 id=&#34;une-application-pour-déménager&#34;&gt;Une application pour déménager&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Road to Caen&lt;/em&gt;&lt;/strong&gt;, c’est le nom de mon nouveau side project. Une des premières choses à faire quand on déménage, c’est de penser à un nouvel appartement. Et c’est plutôt sympa de chercher un appartement en province quand on vient de Paris, on se rend compte qu’on n’est pas obligé de donner un bras pour avoir un logement. Le projet ne va pas consister en une sorte de mashup d’annonces immobilières, mais devra aider à trouver la bonne localisation de cet appartement. La qualité de la localisation va dépendre de critères plus ou moins subjectifs, mais c’est une des qualités des sides projects : on est toujours d’équerre avec le product owner.&lt;/p&gt;
 
@@ -930,7 +981,7 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 &lt;li&gt;l&amp;rsquo;ouvrir à une agence afin vérifier la note de localisation d’une éventuelle proposition de location.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;planning-technique:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Planning technique&lt;/h1&gt;
+&lt;h1 id=&#34;planning-technique&#34;&gt;Planning technique&lt;/h1&gt;
 
 &lt;p&gt;Un side project, c’est aussi l’occasion de tester des nouvelles techno, ou comme ce sera en partie le cas ici, de faire le point sur celles que l’on est sensé maitriser. Voici donc les objectifs techniques, plus ou moins pragmatiques :&lt;/p&gt;
 
@@ -944,7 +995,7 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 &lt;li&gt;Il faudra persister des données (sauvegarde d’adresses, points favoris), synchroniser ces données entre plusieurs devices, et que cela puisse se faire offline. Je pense donc tester quelques services du genre de &lt;a href=&#34;https://www.firebase.com&#34;&gt;Firebase&lt;/a&gt;, &lt;a href=&#34;http://pouchdb.com/&#34;&gt;pouchdb&lt;/a&gt; ou &lt;a href=&#34;http://aws.amazon.com/fr/cognito/&#34;&gt;Amazon Cognito&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;road-to-caen:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Road to Caen&lt;/h1&gt;
+&lt;h1 id=&#34;road-to-caen&#34;&gt;Road to Caen&lt;/h1&gt;
 
 &lt;p&gt;Pour finir ce post, pourquoi Road de Caen ? Et bien en référence au &lt;strong&gt;Road to Rouen&lt;/strong&gt; de &lt;em&gt;Supergrass&lt;/em&gt;.&lt;/p&gt;
 
@@ -954,7 +1005,7 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 
 &lt;p&gt;Dans mon prochain post, j’aborderais le bootstrap du projet, et la mise en place du MVP : les collèges liés à une adresse à Caen.&lt;/p&gt;
 
-&lt;h1 id=&#34;références:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Références&lt;/h1&gt;
+&lt;h1 id=&#34;références&#34;&gt;Références&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a name=&#34;rural_offshore&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://marmelab.com/blog/2015/06/11/iteration-agile.html&#34;&gt;L&amp;rsquo;itération agile : entre SSII et agence, un nouveau mode de prestation informatique&lt;/a&gt;&lt;/li&gt;

@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lean on alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/tags/lean/</link>
+    <link>http://alexisjanvier.github.io/tags/lean/index.xml</link>
     <description>Recent content in Lean on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
-    <lastBuildDate>Mon, 25 Jan 2016 14:19:00 +0100</lastBuildDate>
     <atom:link href="http://alexisjanvier.github.io/tags/lean/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -23,7 +22,7 @@
 Communiquer activement donc, en commençant par ce blog. Et puis écrire c&amp;rsquo;est sans doute &lt;a href=&#34;#ecrire&#34;&gt;une vraie bonne habitude&lt;/a&gt;, même si ce que l’on écrit n’a rien de révolutionnaire.
 Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a href=&#34;http://www.meetup.com/fr-FR/Coding-School-Meetup-Group&#34;&gt;Coding School&lt;/a&gt;, de la &lt;a href=&#34;http://www.meetup.com/fr-FR/Fabrique-de-services-Normandy-Frenchtech/&#34;&gt;fabrique de services&lt;/a&gt;, du &lt;a href=&#34;http://www.forum-digital.fr/&#34;&gt;forum digital&lt;/a&gt;, du &lt;a href=&#34;http://www.club-agile-caen.fr/&#34;&gt;club agile de Caen&lt;/a&gt;&amp;hellip;&lt;/p&gt;
 
-&lt;h1 id=&#34;une-application-pour-déménager:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Une application pour déménager&lt;/h1&gt;
+&lt;h1 id=&#34;une-application-pour-déménager&#34;&gt;Une application pour déménager&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Road to Caen&lt;/em&gt;&lt;/strong&gt;, c’est le nom de mon nouveau side project. Une des premières choses à faire quand on déménage, c’est de penser à un nouvel appartement. Et c’est plutôt sympa de chercher un appartement en province quand on vient de Paris, on se rend compte qu’on n’est pas obligé de donner un bras pour avoir un logement. Le projet ne va pas consister en une sorte de mashup d’annonces immobilières, mais devra aider à trouver la bonne localisation de cet appartement. La qualité de la localisation va dépendre de critères plus ou moins subjectifs, mais c’est une des qualités des sides projects : on est toujours d’équerre avec le product owner.&lt;/p&gt;
 
@@ -42,7 +41,7 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 &lt;li&gt;l&amp;rsquo;ouvrir à une agence afin vérifier la note de localisation d’une éventuelle proposition de location.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;planning-technique:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Planning technique&lt;/h1&gt;
+&lt;h1 id=&#34;planning-technique&#34;&gt;Planning technique&lt;/h1&gt;
 
 &lt;p&gt;Un side project, c’est aussi l’occasion de tester des nouvelles techno, ou comme ce sera en partie le cas ici, de faire le point sur celles que l’on est sensé maitriser. Voici donc les objectifs techniques, plus ou moins pragmatiques :&lt;/p&gt;
 
@@ -56,7 +55,7 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 &lt;li&gt;Il faudra persister des données (sauvegarde d’adresses, points favoris), synchroniser ces données entre plusieurs devices, et que cela puisse se faire offline. Je pense donc tester quelques services du genre de &lt;a href=&#34;https://www.firebase.com&#34;&gt;Firebase&lt;/a&gt;, &lt;a href=&#34;http://pouchdb.com/&#34;&gt;pouchdb&lt;/a&gt; ou &lt;a href=&#34;http://aws.amazon.com/fr/cognito/&#34;&gt;Amazon Cognito&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;road-to-caen:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Road to Caen&lt;/h1&gt;
+&lt;h1 id=&#34;road-to-caen&#34;&gt;Road to Caen&lt;/h1&gt;
 
 &lt;p&gt;Pour finir ce post, pourquoi Road de Caen ? Et bien en référence au &lt;strong&gt;Road to Rouen&lt;/strong&gt; de &lt;em&gt;Supergrass&lt;/em&gt;.&lt;/p&gt;
 
@@ -66,7 +65,7 @@ Et au-delà du blog, j’espère rencontrer rapidement les membres de la &lt;a h
 
 &lt;p&gt;Dans mon prochain post, j’aborderais le bootstrap du projet, et la mise en place du MVP : les collèges liés à une adresse à Caen.&lt;/p&gt;
 
-&lt;h1 id=&#34;références:9cd4ceb89070422811d2d9a5c602c681&#34;&gt;Références&lt;/h1&gt;
+&lt;h1 id=&#34;références&#34;&gt;Références&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a name=&#34;rural_offshore&#34;&gt;&lt;/a&gt;&lt;a href=&#34;http://marmelab.com/blog/2015/06/11/iteration-agile.html&#34;&gt;L&amp;rsquo;itération agile : entre SSII et agence, un nouveau mode de prestation informatique&lt;/a&gt;&lt;/li&gt;

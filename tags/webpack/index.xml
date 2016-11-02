@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webpack on alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/tags/webpack/</link>
+    <link>http://alexisjanvier.github.io/tags/webpack/index.xml</link>
     <description>Recent content in Webpack on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
-    <lastBuildDate>Tue, 09 Feb 2016 11:35:26 +0100</lastBuildDate>
     <atom:link href="http://alexisjanvier.github.io/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -33,7 +32,7 @@
 npm config set save-prefix=&#39;~&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;transpilation-avec-babel:6612d8be89c90440b51740ff705eccc5&#34;&gt;Transpilation avec Babel&lt;/h1&gt;
+&lt;h1 id=&#34;transpilation-avec-babel&#34;&gt;Transpilation avec Babel&lt;/h1&gt;
 
 &lt;p&gt;Je vais utiliser &lt;a href=&#34;https://babeljs.io/&#34;&gt;Babel&lt;/a&gt; pour transpiler le code ES6 en ES5. La version 6 a introduit une nouvelle organisation du projet. Il faut maintenant installer au minimum &lt;strong&gt;babel-core&lt;/strong&gt;, sur lequel vont s&amp;rsquo;appuyer tous les autres modules.&lt;/p&gt;
 
@@ -78,7 +77,7 @@ npm config set save-prefix=&#39;~&#39;
 &lt;p&gt;C&amp;rsquo;est la solution que je vais utiliser (expliquant la déclaration des modules Babel en dépendance de développement, puisque Babel ne sera jamais présent dans le js de production).&lt;br /&gt;
 Et pour cela, nous allons devoir passer par un autre outil : &lt;a href=&#34;https://webpack.github.io/&#34;&gt;&lt;strong&gt;Webpack&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;webpack:6612d8be89c90440b51740ff705eccc5&#34;&gt;Webpack&lt;/h1&gt;
+&lt;h1 id=&#34;webpack&#34;&gt;Webpack&lt;/h1&gt;
 
 &lt;p&gt;Webpack est un « *module bundler* » permettant de gérer notre code es6 écrit en module et générer un fichier final js utilisable dans le navigateur, en effectuant au passage la transpilation ES6 avec Babel.&lt;/p&gt;
 
@@ -195,7 +194,7 @@ module.exports = {
 
 &lt;p&gt;On retrouve au final un fichier &lt;code&gt;index.html&lt;/code&gt; et &lt;code&gt;main.js&lt;/code&gt; dans le répertoire &lt;code&gt;/build/&lt;/code&gt;, que l&amp;rsquo;on peut charger sans erreur dans un navigateur.&lt;/p&gt;
 
-&lt;h1 id=&#34;un-serveur-de-développement:6612d8be89c90440b51740ff705eccc5&#34;&gt;Un serveur de développement&lt;/h1&gt;
+&lt;h1 id=&#34;un-serveur-de-développement&#34;&gt;Un serveur de développement&lt;/h1&gt;
 
 &lt;p&gt;On arrive donc à transpilet notre ES6 dans un fichier unique fichier js, et c&amp;rsquo;est déjà chouette. Mais on ne va pas lancer un build à chaque modifications du code&amp;hellip;&lt;br /&gt;
 Pour éviter cela, on va installer le &lt;strong&gt;webpack-dev-server&lt;/strong&gt;, et en profiter pour faire un makefile afin de faciliter le lancement des commandes (&lt;code&gt;make build&lt;/code&gt; pour lancer un transpilation et &lt;code&gt;make run-dev&lt;/code&gt; pour le lancement du serveur de dev), et permettre à d&amp;rsquo;éventuels autre participants au projet de pouvoir facilement installer tout l&amp;rsquo;environnement de développement (&lt;code&gt;make install&lt;/code&gt;).&lt;/p&gt;
@@ -227,7 +226,7 @@ run-dev: clean-build
 &lt;p&gt;Le &lt;strong&gt;webpack-dev-server&lt;/strong&gt; est très rapide (il charge le code en mémoire) et permet de faire du &lt;em&gt;live-reload&lt;/em&gt; (option &lt;code&gt;–hot&lt;/code&gt;). On transpile maintenant bien le code ES6 en js lisible par le navigateur à la volée.&lt;br /&gt;
 Mais on ne gère que le js, alors que l&amp;rsquo;on veut aussi avoir du css.&lt;/p&gt;
 
-&lt;h1 id=&#34;webpack-et-le-css:6612d8be89c90440b51740ff705eccc5&#34;&gt;Webpack et le css&lt;/h1&gt;
+&lt;h1 id=&#34;webpack-et-le-css&#34;&gt;Webpack et le css&lt;/h1&gt;
 
 &lt;p&gt;Pour gérer le css, on ajoute un nouveau plugin et un nouveau loader (pour du css simple, mais on pourra aussi par la suite &amp;ldquo;&lt;em&gt;pre-processer&lt;/em&gt;&amp;rdquo; du &lt;strong&gt;sass&lt;/strong&gt; par exemple, grace à d&amp;rsquo;autres loaders).&lt;/p&gt;
 
@@ -255,7 +254,7 @@ import &#39;../css/main.css&#39;;
 
 &lt;p&gt;Mais c&amp;rsquo;est comme cela que l&amp;rsquo;on va pouvoir gérer nos css avec Webpack, comme un module js.&lt;/p&gt;
 
-&lt;h1 id=&#34;gestion-des-différents-environnements:6612d8be89c90440b51740ff705eccc5&#34;&gt;Gestion des différents environnements&lt;/h1&gt;
+&lt;h1 id=&#34;gestion-des-différents-environnements&#34;&gt;Gestion des différents environnements&lt;/h1&gt;
 
 &lt;p&gt;Il faut maintenant encore améliorer les choses afin de gérer :&lt;/p&gt;
 
@@ -416,7 +415,7 @@ run-dev: clean-build
     @NODE_ENV=dev ./node_modules/.bin/webpack-dev-server --hot --inline --port=8080
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;les-tests-unitaires:6612d8be89c90440b51740ff705eccc5&#34;&gt;Les tests unitaires&lt;/h1&gt;
+&lt;h1 id=&#34;les-tests-unitaires&#34;&gt;Les tests unitaires&lt;/h1&gt;
 
 &lt;p&gt;On y est presque ! Mais il manque encore les tests unitaires qui seront réalisés avec &lt;a href=&#34;https://mochajs.org/&#34;&gt;mocha&lt;/a&gt; et &lt;a href=&#34;http://chaijs.com/&#34;&gt;chai&lt;/a&gt;.&lt;/p&gt;
 
@@ -457,7 +456,7 @@ describe(&#39;city&#39;, () =&amp;gt; {
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;les-tests-fonctionnels:6612d8be89c90440b51740ff705eccc5&#34;&gt;Les tests fonctionnels&lt;/h1&gt;
+&lt;h1 id=&#34;les-tests-fonctionnels&#34;&gt;Les tests fonctionnels&lt;/h1&gt;
 
 &lt;p&gt;Pour que les tests soient complets, il manque encore les tests fonctionnels. Pour les réaliser, je vais utiliser &lt;a href=&#34;http://nightwatchjs.org/&#34;&gt;Nightwatch&lt;/a&gt;.
 Mais tout d&amp;rsquo;abord, pour faire des tests fonctionnels, on va avoir besoin d&amp;rsquo;un build de prod et d&amp;rsquo;un serveur permettant à Nightwatch d&amp;rsquo;appeler une URL à tester.&lt;/p&gt;
@@ -600,7 +599,7 @@ module.exports = {
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Remarque&lt;/em&gt;&lt;/strong&gt; : &lt;em&gt;Je n&amp;rsquo;ai pas encore trouver comment écrire les tests fonctionnels en ES6 :(&lt;/em&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;la-touche-finale-le-code-styling:6612d8be89c90440b51740ff705eccc5&#34;&gt;La touche finale: le « code styling »&lt;/h1&gt;
+&lt;h1 id=&#34;la-touche-finale-le-code-styling&#34;&gt;La touche finale: le « code styling »&lt;/h1&gt;
 
 &lt;p&gt;Pour terminer cet environnement de développement ES6, on va ajouter un dernier outil permettant d&amp;rsquo;être cohérent sur le code styling du projet : &lt;a href=&#34;http://eslint.org/&#34;&gt;ESLint&lt;/a&gt;&lt;/p&gt;
 
@@ -622,7 +621,7 @@ module.exports = {
 
 &lt;p&gt;J&amp;rsquo;utilise le preset airbnb, qui gère bien l&amp;rsquo;ES6, mais aussi la syntaxe particulière de Redux. Je ne lance pas de tests directement avec ESLint, mais j&amp;rsquo;utilise avec &lt;a href=&#34;https://atom.io/&#34;&gt;ATOM&lt;/a&gt; le plugin &lt;a href=&#34;https://atom.io/packages/linter-eslint&#34;&gt;linter-eslint&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;conclusion:6612d8be89c90440b51740ff705eccc5&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
 
 &lt;p&gt;Alors, &lt;a href=&#34;https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.6bg742tti&#34;&gt;&lt;strong&gt;&lt;em&gt;JavaScript fatigue&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; ? Il est vrai que cette phase de bootstraping est assez longue, et oblige à voir et comprendre pas mal d&amp;rsquo;outils. Un &lt;code&gt;ls&lt;/code&gt; dans le répertoire des &lt;code&gt;node_modules&lt;/code&gt; est plutôt impressionnant ! On est tenté de se dire : &lt;em&gt;tout ça pour générer un (encore) pauvre fichier js final ?&lt;/em&gt;&lt;br /&gt;
 Eh bien oui, mais j&amp;rsquo;oppose à cela plusieurs remarques.&lt;/p&gt;

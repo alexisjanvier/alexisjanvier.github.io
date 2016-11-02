@@ -7,7 +7,7 @@
         <meta name="description" content="Il arrive parfois que l’on doive coder sous Windows : que ce soit par challenge, parce que l’on a perdu un pari ou parce qu’on n’a pas le choix. Et cela peut être un peu douloureux lorsque l’on est habitué à sa console Mac ou Linux.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.16-DEV" />
+        <meta name="generator" content="Hugo 0.18-DEV" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://alexisjanvier.github.io/css/normalize.css">
@@ -86,7 +86,7 @@ ga('send', 'pageview');
 
 <p>Dans mon cas, c’est parce que l’environnement de travail du client ne pouvait être autre chose qu’un Windows 7 sur un VM (avec des droits d’administrateur tout de même), le tout derrière un firewall peu conciliant. La mission prévoyait un back en PHP 5.6 avec du Silex, et un peu de JavaScript sur la partie front.</p>
 
-<h1 id="pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows:6aa41c3eb1676c56b08ae8171afcdcfe">Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows</h1>
+<h1 id="pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows">Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows</h1>
 
 <p>En tout premier lieu, j&rsquo;ai installé Atom, par habitude, même si je ne l&rsquo;ai pas encore utilisé pour du développement PHP.<br />
 Hormis un petit souci initial (pour installer Atom, j’ai eu besoin d&rsquo;une version 4.5 de .net et de l&rsquo;espace disque allant avec), l’installation officielle se passe bien.<br />
@@ -115,7 +115,7 @@ proxy = &quot;http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT&quot;
 
 <p>Bref, la matinée commençait plutôt mal, et les bonnes vannes sur Windows me revenaient en tête au galop.</p>
 
-<h1 id="babun:6aa41c3eb1676c56b08ae8171afcdcfe">Babun</h1>
+<h1 id="babun">Babun</h1>
 
 <p>Il me semblait pourtant me rappeler d&rsquo;une possible solution à mon problème, une promesse de console sous Windows que j&rsquo;avais dû noter quelque part&hellip; Grâce à <a href="https://raindrop.io">Raindrop</a>, j&rsquo;ai retrouvé ce projet: <a href="http://babun.github.io/">Babun</a>.</p>
 
@@ -139,7 +139,7 @@ export no_proxy=localhost
 
 <p><img src="/images/tmuxMakeServer.PNG" alt="Composer installer" /></p>
 
-<h1 id="oui-mais:6aa41c3eb1676c56b08ae8171afcdcfe">Oui, mais</h1>
+<h1 id="oui-mais">Oui, mais</h1>
 
 <p>Il était enfin temps de se mettre eu travail : je lançais un <code>composer requier silex</code>, et là, <em>badabun</em> :</p>
 
@@ -152,7 +152,7 @@ Au final, et avec un peu de temps, j&rsquo;ai installé un environnement PHP et 
 
 <p><img src="/images/finalCygwin.PNG" alt="Composer installer" /></p>
 
-<h1 id="pour-finir:6aa41c3eb1676c56b08ae8171afcdcfe">Pour finir</h1>
+<h1 id="pour-finir">Pour finir</h1>
 
 <p>Rien de bien révolutionnaire dans ce post de blog: Cygwin est un projet déjà ancien. Mais c&rsquo;est sans aucun doute un outil à connaitre, que l&rsquo;on soit habituellement sous Windows ou pas. Le projet Babun est aussi intéressant, et accélère grandement l&rsquo;installation d&rsquo;une console compléte &hellip; tant que la version de Cygwin 32 n&rsquo;est pas un problème.</p>
 

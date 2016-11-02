@@ -7,7 +7,7 @@
         <meta name="description" content="L’application « Road to Caen » est maintenant bootstrappée. Avant de commencer le développement proprement, il reste à mettre en place le tunnel de déploiement continu, du code créé en local au bucket S3 d’hébergement, déploiement sécurisé par l’exécution automatique des tests unitaires et fonctionnels déjà mis en place.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="generator" content="Hugo 0.16-DEV" />
+        <meta name="generator" content="Hugo 0.18-DEV" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://alexisjanvier.github.io/css/normalize.css">
@@ -84,7 +84,7 @@ ga('send', 'pageview');
 
     
 
-<h1 id="hébergement-du-site-sur-s3:96a87f790f36364b1f853c8d8fae51a3">Hébergement du site sur S3</h1>
+<h1 id="hébergement-du-site-sur-s3">Hébergement du site sur S3</h1>
 
 <p>L’un des objectifs du projet est de réaliser une application <strong>serverless</strong>. Pour <strong><em>Road to Caen</em></strong>, ce ne devrait pour l’instant pas être compliqué, l’application ne consistant qu’en une application JavaScript. Il suffira donc d’héberger les fichiers statiques sur un Bucket S3, configuré pour pouvoir servir ses fichiers en HTTP.</p>
 
@@ -92,11 +92,11 @@ ga('send', 'pageview');
 
 <p>Je vais juste revenir sur les points qui me semblent les plus importants.</p>
 
-<h3 id="nommage-du-bucket:96a87f790f36364b1f853c8d8fae51a3">- Nommage du bucket</h3>
+<h3 id="nommage-du-bucket">- Nommage du bucket</h3>
 
 <p>Il faut donner le même nom au bucket que l’url du site. Par exemple pour une url <strong>mon_site. mon_domaine.com</strong>, on nommera le bucket&hellip; <strong>mon_site. mon_domaine.com</strong></p>
 
-<h3 id="création-d-un-utilisateur-iam-et-d-une-policies-spécifique-pour-le-bucket:96a87f790f36364b1f853c8d8fae51a3">- Création d&rsquo;un utilisateur IAM, et d&rsquo;une <em>Policies</em> spécifique pour le bucket</h3>
+<h3 id="création-d-un-utilisateur-iam-et-d-une-policies-spécifique-pour-le-bucket">- Création d&rsquo;un utilisateur IAM, et d&rsquo;une <em>Policies</em> spécifique pour le bucket</h3>
 
 <p>Ensuite, il est <strong>obligatoire</strong> de créer un utilisateur IAM pour interagir avec notre bucket, afin d’être certain de ne jamais utiliser <strong>l’aws_access_key_id</strong> et <strong>l’aws_secret_access_key</strong> de l’utilisateur principal du compte AWS (le root en quelque sorte). Certains s’en sont mordu les doigts.</p>
 
@@ -121,14 +121,14 @@ ga('send', 'pageview');
 }
 </code></pre>
 
-<h3 id="ajout-d-une-entrée-cnam-au-dns-de-son-domaine:96a87f790f36364b1f853c8d8fae51a3">- Ajout d&rsquo;une entrée CNAM au DNS de son domaine</h3>
+<h3 id="ajout-d-une-entrée-cnam-au-dns-de-son-domaine">- Ajout d&rsquo;une entrée CNAM au DNS de son domaine</h3>
 
 <p>Il faut ajouter une entrée CNAM dans les réglages DNS de son domaine.</p>
 
 <pre><code>mon_site CNAME mon_site.mon_domaine.com.s3-website-eu-west-1.amazonaws.com.
 </code></pre>
 
-<h1 id="déploiement-manuel:96a87f790f36364b1f853c8d8fae51a3">Déploiement manuel</h1>
+<h1 id="déploiement-manuel">Déploiement manuel</h1>
 
 <p>Avant de configurer le déploiement automatique, on va tout de même configurer de quoi déployer <em>à la main</em> notre code sur S3.<br />
 Pour cela, il faut tout d&rsquo;abord installer <a href="https://aws.amazon.com/fr/cli/">awscli</a>. Sur un Mac, on peut utiliser <a href="http://brew.sh/">brew</a> :</p>
@@ -160,7 +160,7 @@ deploy: build
     aws s3 --profile=IAM_USER_PROFIL --region=eu-west-1 sync ./build/ s3://YOUR-BUCKET-NAME/ --delete
 </code></pre>
 
-<h1 id="worflow-de-développement-et-intégration-continue:96a87f790f36364b1f853c8d8fae51a3">Worflow de développement et intégration continue</h1>
+<h1 id="worflow-de-développement-et-intégration-continue">Worflow de développement et intégration continue</h1>
 
 <p>Le worflow de développement sera très simple; c&rsquo;est d&rsquo;ailleurs celui que je trouve le meilleur, même sur les projets plus importants :</p>
 
@@ -218,13 +218,13 @@ install:
 
 <p>Il faut évidemment déclarer le dépôt git du projet sur le site de Travis, pour qu&rsquo;il puisse mettre en place les webhooks lui permettant de savoir quand une PR est réalisée. Travis est gratuit pour les dépôts publics.</p>
 
-<h1 id="déploiement-continu:96a87f790f36364b1f853c8d8fae51a3">Déploiement continu</h1>
+<h1 id="déploiement-continu">Déploiement continu</h1>
 
 <p>Pour finir, on va automatiser le déploiement du code sur notre Bucket S3, lorsque la PR  (passée <em>au vert</em> sur Travis) est mergée sur la branche <strong>master</strong>. Pour cela, j&rsquo;utilise <a href="https://snap-ci.com"><strong>Snap CI</strong></a> (mais il en existe d&rsquo;autres), qui est tout comme Travis gratuit pour les dépôts git public. L&rsquo;interface est bien réalisée, et permet de monter un <strong><em>pipeline</em></strong> d&rsquo;étapes, dont une réalisant le déploiement sur S3. Une étape peut également consistée à lancer les tests une dernière fois avant de déployer, au cas où &hellip;</p>
 
 <p><img src="/images/rtc_deployment/snapCiRTC.png" alt="Road to Caen Pipeline" /></p>
 
-<h1 id="c-est-prêt:96a87f790f36364b1f853c8d8fae51a3">C&rsquo;est prêt !</h1>
+<h1 id="c-est-prêt">C&rsquo;est prêt !</h1>
 
 <p>Et voilà, on peut commencer à coder en ES6 sur une <strong>nouvelle branche</strong>. Une fois une feature terminée et <strong>testée</strong>, on propose le code via une <strong>PR sur Github</strong>. Si les tests passent tous sur <strong>Travis</strong>, on <strong>merge</strong> la PR, et <strong><em>tadam</em></strong>, le code est directement envoyé sur <strong>S3</strong> grâce à <strong>Snap CI</strong> et accessible à la terre entière.</p>
 

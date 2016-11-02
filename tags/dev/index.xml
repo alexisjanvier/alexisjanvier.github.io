@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dev on alexisjanvier.net</title>
-    <link>http://alexisjanvier.github.io/tags/dev/</link>
+    <link>http://alexisjanvier.github.io/tags/dev/index.xml</link>
     <description>Recent content in Dev on alexisjanvier.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>mon copyright</copyright>
-    <lastBuildDate>Mon, 01 Feb 2016 11:35:26 +0100</lastBuildDate>
     <atom:link href="http://alexisjanvier.github.io/tags/dev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -20,7 +19,7 @@
 
 &lt;p&gt;Dans mon cas, c’est parce que l’environnement de travail du client ne pouvait être autre chose qu’un Windows 7 sur un VM (avec des droits d’administrateur tout de même), le tout derrière un firewall peu conciliant. La mission prévoyait un back en PHP 5.6 avec du Silex, et un peu de JavaScript sur la partie front.&lt;/p&gt;
 
-&lt;h1 id=&#34;pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows&lt;/h1&gt;
+&lt;h1 id=&#34;pourquoi-a-t-il-fallu-trouver-une-autre-solution-que-les-installateurs-windows&#34;&gt;Pourquoi a-t-il fallu trouver une autre solution que les installateurs Windows&lt;/h1&gt;
 
 &lt;p&gt;En tout premier lieu, j&amp;rsquo;ai installé Atom, par habitude, même si je ne l&amp;rsquo;ai pas encore utilisé pour du développement PHP.&lt;br /&gt;
 Hormis un petit souci initial (pour installer Atom, j’ai eu besoin d&amp;rsquo;une version 4.5 de .net et de l&amp;rsquo;espace disque allant avec), l’installation officielle se passe bien.&lt;br /&gt;
@@ -49,7 +48,7 @@ proxy = &amp;quot;http://LOGIN:PASSWORD@PROXY_URL:PROXY_PORT&amp;quot;
 
 &lt;p&gt;Bref, la matinée commençait plutôt mal, et les bonnes vannes sur Windows me revenaient en tête au galop.&lt;/p&gt;
 
-&lt;h1 id=&#34;babun:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Babun&lt;/h1&gt;
+&lt;h1 id=&#34;babun&#34;&gt;Babun&lt;/h1&gt;
 
 &lt;p&gt;Il me semblait pourtant me rappeler d&amp;rsquo;une possible solution à mon problème, une promesse de console sous Windows que j&amp;rsquo;avais dû noter quelque part&amp;hellip; Grâce à &lt;a href=&#34;https://raindrop.io&#34;&gt;Raindrop&lt;/a&gt;, j&amp;rsquo;ai retrouvé ce projet: &lt;a href=&#34;http://babun.github.io/&#34;&gt;Babun&lt;/a&gt;.&lt;/p&gt;
 
@@ -73,7 +72,7 @@ export no_proxy=localhost
 
 &lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/tmuxMakeServer.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;oui-mais:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Oui, mais&lt;/h1&gt;
+&lt;h1 id=&#34;oui-mais&#34;&gt;Oui, mais&lt;/h1&gt;
 
 &lt;p&gt;Il était enfin temps de se mettre eu travail : je lançais un &lt;code&gt;composer requier silex&lt;/code&gt;, et là, &lt;em&gt;badabun&lt;/em&gt; :&lt;/p&gt;
 
@@ -86,7 +85,7 @@ Au final, et avec un peu de temps, j&amp;rsquo;ai installé un environnement PHP
 
 &lt;p&gt;&lt;img src=&#34;http://alexisjanvier.github.io/images/finalCygwin.PNG&#34; alt=&#34;Composer installer&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;pour-finir:6aa41c3eb1676c56b08ae8171afcdcfe&#34;&gt;Pour finir&lt;/h1&gt;
+&lt;h1 id=&#34;pour-finir&#34;&gt;Pour finir&lt;/h1&gt;
 
 &lt;p&gt;Rien de bien révolutionnaire dans ce post de blog: Cygwin est un projet déjà ancien. Mais c&amp;rsquo;est sans aucun doute un outil à connaitre, que l&amp;rsquo;on soit habituellement sous Windows ou pas. Le projet Babun est aussi intéressant, et accélère grandement l&amp;rsquo;installation d&amp;rsquo;une console compléte &amp;hellip; tant que la version de Cygwin 32 n&amp;rsquo;est pas un problème.&lt;/p&gt;
 
