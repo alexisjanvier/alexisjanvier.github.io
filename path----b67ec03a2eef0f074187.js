@@ -1,2 +1,2 @@
-webpackJsonp([60335399758886],{134:function(t,e){t.exports={data:{site:{siteMetadata:{title:"This is not 'Nam.",subtitle:"This is my blog. There are rules.",twitter:"alexisjanvier",github:"alexisjanvier",author:"Àlexis Janvier"}}},layoutContext:{}}}});
+webpackJsonp([60335399758886],{148:function(t,e){t.exports={data:{site:{siteMetadata:{title:"This is not 'Nam.",subtitle:"This is my blog. There are rules.",twitter:"alexisjanvier",github:"alexisjanvier",author:"Àlexis Janvier"}}},layoutContext:{}}}});
 //# sourceMappingURL=path----b67ec03a2eef0f074187.js.map
