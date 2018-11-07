@@ -1,0 +1,453 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/0.08eb512c534233bffd38.css">code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><style data-href="/component---src-templates-blog-post-js.8561d3a56fd02900d3af.css">header h3,header h5{display:inline-block;padding-right:.5rem;margin-top:0}header a{text-shadow:none;background-image:none;text-decoration:none;vertical-align:middle}header a:hover{color:red}header a img{vertical-align:middle}.blog-list a:hover{color:#000}.blog-list h2,.blog-list h4{margin-bottom:.5rem}.blog-list h4{font-style:italic;margin-top:0}.blog-list h4 span{display:inline-block;color:grey;font-size:.8rem}.postIntro h1{font-size:2.5rem;width:100%;text-align:center;margin-top:1rem;margin-bottom:.5rem}.postIntro p.tags{font-size:.8rem;color:grey;margin:0;text-align:center}.postIntro p.date{margin:0 0 1rem;text-align:center}.postIntro p.intro{margin-top:1.5rem;font-style:italic}</style><meta name="generator" content="Gatsby 2.0.31"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:125%/1.5 'PT Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'PT Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Oswald',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Oswald',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Oswald',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Oswald',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Oswald',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:hsla(0,0%,0%,0.9);font-family:'Oswald',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0.9375rem;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1.1487rem;line-height:1.5rem;border-left:0.5625rem solid #292d35;color:hsla(0,0%,0%,0.65);font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.5rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#292d35;text-decoration:none;text-shadow:.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;background-image:linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #292d35 1px, #292d35 2px, rgba(0, 0, 0, 0) 2px);}a:hover,a:active{text-shadow:none;background-image:none;}h1,h2,h3,h4,h5,h6{margin-top:3rem;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.5rem;color:hsla(0,0%,0%,0.8);font-style:normal;font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){html{font-size:106.25%;line-height:24.65px;}blockquote{border-left:0.28125rem solid #292d35;color:hsla(0,0%,0%,0.59);padding-left:0.84375rem;font-style:italic;margin-left:-1.125rem;margin-right:0;}}</style><link href="//fonts.googleapis.com/css?family=Oswald:700|PT+Sans:400,400i,700" rel="stylesheet" type="text/css"/><link rel="stylesheet" href="https://assets-cdn.github.com/assets/gist-embed-87673c31a5b37b5e6556b63e1081ebbc.css"/><title data-react-helmet="true">Journal intime d&#x27;un développeur</title><meta data-react-helmet="true" name="author" content="Àlexis Janvier"/><meta data-react-helmet="true" name="description" content="Une chose que j’aime particulièrement dans mon métier de développeur, c’est que l’on apprend tout le temps : un pattern, une lib, une obscure astuce de configuration… Dans le feu de l’action, on se réjouit, mais quelques jours après, souvent, on oublie. C’est dans ces moments-là que l’on se dit que l’on aurait bien fait de prendre des notes."/><meta data-react-helmet="true" name="keywords" content="cli,tool"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/app-16d753f7623b9101d414.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-c55e6c8c71955cf242f5.js"/><link as="script" rel="preload" href="/1-9c09af5d63ec6fe29a96.js"/><link as="script" rel="preload" href="/0-c860f96b84aa7c7b5ed5.js"/><link as="script" rel="preload" href="/webpack-runtime-09ef8c2fe406c7d1cdc2.js"/><link rel="preload" href="/static/d/119/path---journal-intime-dun-developpeur-fe-3-a8b-sBlnz390IDipwEjxiNTpjcSTIc0.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><header><div style="margin:0 auto;max-width:1000px;padding:1.25rem 1rem"><header style="margin-bottom:1.5rem"><a href="/"><h3>This is not &#x27;Nam.</h3><h5>This is my blog. There are rules.</h5></a><ul style="list-style:none;float:right"><li style="display:inline-block;margin-right:1rem"><a href="/">Blog</a></li><li style="display:inline-block;margin-right:1rem"><a href="/about/">About</a></li><li style="display:inline-block;margin-right:1rem"><a href="https://twitter.com/alexisjanvier"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAjcAAAI3AfcGRMIAAAAHdElNRQfhCQEKGCQX757NAAACjElEQVRIx62VX0hTURzHP/e6NRkYLREcrLeCfFDBGL4UiWGJL+sP9FLkQ4FR7MGHhHTe251OqRBJX6qXIBDCelCQIAYS9CSVBCsHFT3EaIIxs8HYmnp72N28/zYn+Hs653fO93Pv7/x+5/wEFatNu9Y71QBNePECSZLEhXnPYjBn3SuYAWPevMQV6my4aWac4cFkBYBSS4h+3JS3DJOMyllbgNLIHO3sbkucl1ctgJHm7df4qpADJMSe4ZgBoDTyvmo5QAJ/4S9ELfa5PcnBx5xSWwIQqhj7Jo+Fy5wRBvgBQIy/QDshLYQxb/67dvKPOEWbSZ7inPyhMHxQl72lRnHzrpAR59HBpAh5qZS4Wbr4aALcLsphIC3d5w+XeAOAOy+BMOVKrZXK5oicmHalJAZwaJ4N2YOp1sIB9ZW2nj7cIK536qruJARz8pDYxlM2APhslo+cUGdL+Lr1TlEN6FZ7X9YADMfkPhqFs/SzYD7RbT8HdmZqwEGTbjUWv8GTwlDOEiVqk5MWw6zJgVc3fSEt71oBrYaZVzQAru8qF2g2A/TWp1ysrB89br7oIvr7XcNzZWK8oTxgK2JyJI0AyPDw7lo5udLNBSsgbnA08AzBXj7tYsrijIvCvMnVrSyH7yg2dzM1yDHLmc6LnkXSJm+r2oJo3qqEkCzMtGfREcwpM9wE4Be/WeELC/In477x+n8T9NpENRPMOcAZzl/DDRxklkn5p+nLh7jKPept5BlnWHvSlFGGNOcmUVaEb3xVt/Dh4zRdOMskJSKHioBa3lb1HuttiQ45u1+PKsirYg+J6uViT7EzlNI1HMPPUpU/7y92BfT5llfpIEKmojhDhI6dvrTfzbVoe2nv/wH5+trdc83aGwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNy0wOS0wMVQxMDoyNDozNiswMjowMORVb1wAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTctMDktMDFUMTA6MjQ6MzYrMDI6MDCVCNfgAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAA10RVh0VGl0bGUAVHdpdHRlcpMAsEgAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="/></a></li><li style="display:inline-block;margin-right:1rem"><a href="https://github.com//alexisjanvier"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAjcAAAI3AfcGRMIAAAAHdElNRQfhCQEKFycJftO4AAAC2ElEQVRIx62VTUhUURTHf/c10/hJ+VH6wtqVWhi0qHEhItIiKhzbtCncRFSLWQhRJubrjTqLXAjZoqKPlVA7B0JXCUIIOqiLIkcNizRGEfxoBptpdF6LefPmOTM5Cp3NOx/3/7/3nHfPPUIjVXptq/Wag0pkZMCPnynhKRhyhlPXimQCtxxp5xr5aXgD9Fldrf4dCNQs2mgmh3/LBj10KqG0BGop/djZWZYpZoxGZTHukOJKRxVe7CyTi4O3bKTZ+zV25TAj2PF2VCWdQC3FSxkwrVQAPM7/7RRLzO2bs6yFiigWR7Vx5TuA+pIbwAJnY6ew6Ln3U2be7l4At2GsM8eYseO0BlBGv1qnhOIptGXMPSFR/WunTa+BW6bZCE9mwmuvmNfVZrcMEkTajR8XsrRkIlDWxANdzYm0g3hiW1k2rs0L5VbmHHptK8FY7QgUHpJW6023bj4zHJxhvuhq/mq9pDlMsbVdFtK4JZpDojLhF7m7JMgztEoJ2VThwj0TyBZkQCPICjMs7ZLgJ0EKKMGCHO+FLbKpoEE9kRmtXmCdTfbHLqF4NMNxU/QH9kSnpYWfY4Aiw5yV2P5AHGPCdWnH3T+Y4OC3MEWtbgQZ5DKy9l79iEcajM4qfwxglnQm6uAKySlOScKTqK0YphofUEN39DPXE+vEjegI91PgCI9UMEQgbmrd0pbUxCwAXuVNYqH2HF+ajAIFQ5IzTJ/hyI6+s36lDid3qEVTs0C9C2qOssl4GoI+Z9gCVlekyejHU+FnttstT3XrJBPkAdUM8SsFvmF1gQStfnpM7qvhb6pP9bluAqd1Xw0kEjWkp9Uff5E6GTUFDlBOuVYEokT3HOm1kTxARukEnUAJ0chCaoqaiGsrgqxtoQUaY9PBmAsdVdGBbQ/rOsMcZJDzTNJAIcVmuHTx4Sf9R+5xsMQOn26wgLJIHV1pRsq2ytNFnblb/u9wjctexvtf2qD0QeZRdFEAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDktMDFUMTA6MjM6MzkrMDI6MDDwwQTMAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTA5LTAxVDEwOjIzOjM5KzAyOjAwgZy8cAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAMdEVYdFRpdGxlAEdpdEh1YlTKy1sAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII="/></a></li></ul></header><div><div class="postIntro"><h1>Journal intime d&#x27;un développeur</h1><p class="date">Publié le <!-- -->07 novembre 2018</p></div><div><p>C’est une bonne habitude que de noter toutes ces petites choses apprises au jour le jour. Pourtant ce n’est pas toujours facile d’intégrer un moyen de prise de notes dans ce quotidien. J’ai déjà essayé pas mal d’outils : <a href="http://jrnl.sh/">jrnl</a>, mais je n’ai jamais réussi à me souvenir des commandes, <a href="https://boostnote.io/">boostnote</a> que je n’utilise pas lorsque je code, car c’est une fenêtre en plus, ou encore <a href="https://gist.github.com/">gist</a> mais je n’arrive pas à le tenir organisé…
+Et puis j'ai reçu ce lien <a href="https://theptrk.com/2018/07/11/did-txt-file/">did.txt file</a> dans ma newsletter <a href="https://changelog.com/">changelog</a>.</p>
+<h2>did.txt</h2>
+<p>Voici comment <a href="https://theptrk.com/about/">Patrick</a> introduit son article:</p>
+<blockquote>
+<p>Goal: create an insanely simple “did” file accessible by terminal</p>
+</blockquote>
+<p>Effectivement, c'est très simple et diablement efficace. Il s'agit juste d'ajouter un alias dans son <code class="language-text">.bash_profile</code> ou son <code class="language-text">.zshrc</code> :</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">alias</span> did<span class="token operator">=</span><span class="token string">"vim +'normal Go' +'r!date' ~/did.txt"</span></code></pre></div>
+<p>Une commande <code class="language-text">did</code> ouvre dans le terminal - on ne quitte donc pas son environnement de travail - un fichier avec la date du jour au sein duquel il ne reste plus qu'à transcrire cette petite chose que vous venez d'apprendre.</p>
+<p><img src="/images/did/did_init.gif" alt="Did : la commande d&#x27;origine"></p>
+<p>Et ça m'a beaucoup plu cette idée d'avoir un nouvel outil construit avec ce que l'on a déjà sous la main sur le système. Mais il est sans doute un peu trop simple. Par exemple, voici ce qui se passe si on utilise deux fois la commande dans la même journée :</p>
+<p><img src="/images/did/did_init_pbl.gif" alt="Sans doute trop simple"></p>
+<p>En fait, très rapidement deux problèmes ont émergé me faisant penser que je n’intégrerais pas cette commande <code class="language-text">did</code> à mon quotidien :</p>
+<ul>
+<li><strong>Toutes les notes sont dans un seul fichier</strong>, et comme il s’agit de notes quotidiennes, ce fichier risque de devenir beaucoup trop long pour être exploitable. L’intérêt de prendre des notes, c’est de pouvoir les relire !</li>
+<li><strong>Le fichier est en <code class="language-text">.txt</code></strong>, limitant fortement les possibilités de mise en forme des notes, comme les extraits de code.</li>
+</ul>
+<p>Ce post documente comment j’ai adapté cette bonne idée à ce dont j’avais besoin en tachant de garder la même simplicité que le <code class="language-text">did</code> initial et en continuant à n’utiliser que ce qui était déjà disponible dans la console.</p>
+<h2>Un journal par semaine</h2>
+<p>Je travaille en cycle (sprint) de deux semaines, aussi la découpe de l’unique fichier en plusieurs journaux hebdomadaires s’est tout de suite imposée.</p>
+<p>Je ne vais pas rentrer dans les détails de l’implémentation, voici le résultat (presque) final. L'option <code class="language-text">--help</code>, <a href="https://fr.wikipedia.org/wiki/Man_(Unix)"><code class="language-text">man</code></a> et Google ont été mes amis pour arriver à ce résultat.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">export</span> DID_PATH<span class="token operator">=</span>~/.did
+
+<span class="token keyword">function</span> did<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">export</span> LC_ALL<span class="token operator">=</span>C
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> -f <span class="token variable">${DID_PATH}</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%V<span class="token variable">)</span></span>.txt <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token keyword">echo</span> <span class="token string">"Week <span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +"%V <span class="token punctuation">(</span>%B %Y<span class="token variable">)</span></span>"</span><span class="token punctuation">)</span> \n\n<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +<span class="token string">"%A %Y-%m-%d"</span><span class="token variable">)</span></span><span class="token string">" > <span class="token variable">${DID_PATH}</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%V<span class="token variable">)</span></span>.txt
+    fi
+    FILE_EDITION_DATE="</span><span class="token variable"><span class="token variable">$(</span><span class="token function">stat</span> -c <span class="token string">"%y"</span> $<span class="token punctuation">{</span>DID_PATH<span class="token punctuation">}</span>/<span class="token punctuation">$(</span>date +%Y-%V<span class="token variable">)</span></span>.txt<span class="token punctuation">)</span><span class="token string">"
+    NOW="</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +<span class="token string">"%Y-%m-%d"</span><span class="token variable">)</span></span><span class="token string">"
+    if [ <span class="token variable">${FILE_EDITION_DATE:0:10}</span> != <span class="token variable">${NOW}</span> ]
+    then
+        echo "</span>\n<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +<span class="token string">"%A %Y-%m-%d"</span><span class="token variable">)</span></span>\n" <span class="token operator">>></span> <span class="token variable">${DID_PATH}</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%V<span class="token variable">)</span></span>.txt
+    <span class="token keyword">fi</span>
+    unset LC_ALL
+    vim +<span class="token string">'normal Go'</span> <span class="token variable">${DID_PATH}</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%V<span class="token variable">)</span></span>.txt
+<span class="token punctuation">}</span></code></pre></div>
+<br />
+Voici tout de même les points qui me semblent importants.
+<ul>
+<li><strong>Une fonction plutôt qu'un alias</strong> : avec l'introduction d'une logique de type <em>si le journal existe, alors, sinon</em>, il a fallu remplacer le simple alias par une fonction shell. <code class="language-text">if [ ! -f ${DID_PATH}/$(date +%Y-%V).txt ]; then</code></li>
+<li><strong>La commande <code class="language-text">date</code></strong> : c'est la commande que j'ai le plus testée. Ici elle est simplement utilisée pour formater la date courante. Par exemple <code class="language-text">date +%Y-%V</code></li>
+<li><strong>La commande <code class="language-text">stat</code></strong> : elle permet de récupérer beaucoup d'information sur un fichier, comme la date de dernière modification <code class="language-text">stat -c &quot;%y&quot; ${DID_PATH}/$(date +%Y-%V).txt</code>. C'est ce qui m'a permis de savoir si le fichier avait déjà été édité dans la journée ou non, pour décider s’il fallait rajouter ou non cette date à la fin du fichier.</li>
+<li><strong>La locale du terminal</strong> : la commande <code class="language-text">date</code> est sensible à la locale du terminal. J'avais donc des mois et des jours en français. Pour pouvoir tenir mes notes en anglais, il a fallu changer la locale du terminal le temps de l'exécution de la commande avec un <code class="language-text">LC_ALL=C</code></li>
+<li><strong>La variable d'environnement <code class="language-text">DID_PATH</code></strong> : cette variable est très logique, puisqu'elle simplifie l'écriture du script et permet de changer facilement le répertoire de stockage des journaux. Mais elle a un effet de bord génial : en utilisant <a href="https://direnv.net/">direnv</a>, cela va permettre de créer des notes spécifiques par projet !</li>
+</ul>
+<p><img src="/images/did/did.gif" alt="la nouvelle commande did"></p>
+<p>Cette nouvelle commande fait le boulot puisque l’on utilise maintenant un fichier par semaine au lieu d'un unique fichier. Mais cette amélioration illustre assez bien l'article de David Kadavy <a href="https://medium.com/@kadavy/complexity-is-creepy-its-never-just-one-more-thing-79a6a89192db"><em>La complexité est flippante : ce n'est jamais "juste une chose de plus"</em></a>.</p>
+<p>En effet, ma <em>chose de plus</em> apporte son lot de questions :</p>
+<ul>
+<li>Avec le <code class="language-text">did</code> initial, j'ouvrais toujours le même fichier. Mais maintenant <code class="language-text">did</code> ouvre le journal de la semaine courante. <strong>Comment vais-je visualiser mes notes de la semaine dernière</strong> ?</li>
+<li>Si je veux ouvrir un journal passé, <strong>comment vais-je savoir quels journaux existent</strong> ?</li>
+<li>Avec le <code class="language-text">did</code> initial, je pouvais faire une recherche avec <code class="language-text">vim</code> au sein de mon unique fichier. Mais maintenant, <strong>comment vais-je retrouver une note au sein de tous les journaux</strong> ?</li>
+</ul>
+<h2>Visualiser un journal spécifique : didv (view)</h2>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token keyword">function</span> didv<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$1</span> <span class="token punctuation">]</span>
+    <span class="token keyword">then</span>
+         <span class="token function">cat</span> <span class="token variable">${DID_PATH}</span>/<span class="token variable">${1}</span>.txt
+    <span class="token keyword">else</span>
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> -f <span class="token variable">${DID_PATH}</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%V<span class="token variable">)</span></span>.txt <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+            LC_ALL<span class="token operator">=</span>C <span class="token keyword">echo</span> <span class="token string">"# Week <span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +"%V <span class="token punctuation">(</span>%B %Y<span class="token variable">)</span></span>"</span><span class="token punctuation">)</span> \n\n<span class="token comment">## $(date +"%A %Y-%m-%d")" > ${DID_PATH}/$(date +%Y-%V).txt</span>
+        <span class="token keyword">fi</span>
+        <span class="token function">cat</span> <span class="token variable">${DID_PATH}</span>/<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%V<span class="token variable">)</span></span>.txt
+    <span class="token keyword">fi</span>
+<span class="token punctuation">}</span></code></pre></div>
+<br />
+Cette commande est plus simple que `did`, mais elle introduit l'utilisation des arguments d'une commande shell: `if [ $1 ]`.
+`didv` permet d'ouvrir le journal courant et `didv 2018-32` le journal de la semaine 32.
+C'est `cat`qui se charge de l'affichage du fichier.
+<p><img src="/images/did/didv_txt.gif" alt="Visualiser les journaux avec didv"></p>
+<h2>Lister les journaux hebdomadaires : didl (list)</h2>
+<p>Je pensais que la mise en place de la liste des journaux serait la fonctionnalité la plus rapide à mettre en place. J'ai de manière pragmatique tester les commandes <code class="language-text">ls</code> et <code class="language-text">tree</code> : </p>
+<p><img src="/images/did/ls_tree.gif" alt="Liste des journaux avec ls et tree"></p>
+<p>Mais deux choses me dérangeaient : </p>
+<ul>
+<li>je ne voulais pas afficher l'extension du fichier (par exemple <code class="language-text">2018-32</code> à la place de <code class="language-text">2018-32.txt</code>),</li>
+<li>je voulais afficher le mois correspondant au numéro de semaine pour rendre la liste plus lisible.</li>
+</ul>
+<p>Et afficher <a href="https://en.wikipedia.org/wiki/ISO_week_date#Calculating_the_week_number_of_a_given_date">le mois à partir du numéro de semaine</a> avec la commande <code class="language-text">date</code> fut la partie la plus compliquée de cette journée amélioration de <code class="language-text">did</code> !</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token keyword">function</span> week2Month<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">export</span> LC_ALL<span class="token operator">=</span>C
+    year<span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token keyword">echo</span> $1 <span class="token operator">|</span> <span class="token function">cut</span> -f1 -d-<span class="token variable">)</span></span>
+    week<span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token keyword">echo</span> $1 <span class="token operator">|</span> <span class="token function">cut</span> -f2 -d-<span class="token variable">)</span></span>
+    local dayofweek<span class="token operator">=</span>1 <span class="token comment"># 1 for monday</span>
+    <span class="token function">date</span> -d <span class="token string">"<span class="token variable">$year</span>-01-01 +<span class="token variable"><span class="token variable">$((</span> $week <span class="token operator">*</span> <span class="token number">7</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">-</span> $<span class="token punctuation">(</span>date <span class="token operator">-</span>d "$year<span class="token operator">-</span><span class="token number">01</span><span class="token operator">-</span><span class="token number">04</span>" <span class="token operator">+</span><span class="token operator">%</span>w <span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">3</span> <span class="token variable">))</span></span> days -2 days + <span class="token variable">$dayofweek</span> days"</span> +<span class="token string">"%B %Y"</span>
+    unset LC_ALL
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> didl<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token function">file</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> $<span class="token punctuation">{</span>DID_PATH<span class="token punctuation">}</span>/*.txt <span class="token operator">|</span> <span class="token function">sort</span> -Vr<span class="token variable">`</span></span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+        filenameRaw<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">basename</span> $<span class="token punctuation">{</span>file<span class="token punctuation">}</span><span class="token variable">)</span></span>"</span>
+        filename<span class="token operator">=</span><span class="token string">"<span class="token variable">${filenameRaw%.*}</span>"</span>
+        <span class="token keyword">echo</span> <span class="token string">"<span class="token variable">${filename}</span> (<span class="token variable"><span class="token variable">$(</span>week2Month $<span class="token punctuation">{</span>filename<span class="token punctuation">}</span><span class="token variable">)</span></span>)"</span>
+    <span class="token keyword">done</span>
+<span class="token punctuation">}</span></code></pre></div>
+<br />
+![didl](/images/did/didl.gif)
+<h2>Faire une recherche dans les journaux hebdomadaires : dids (search)</h2>
+<p>Et nous voici à la dernière fonctionnalité à implémenter : faire une recherche dans les journaux. C'est <code class="language-text">grep</code> qui est mis à contribution.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token keyword">function</span> dids<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">export</span> LC_ALL<span class="token operator">=</span>C
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$1</span> <span class="token punctuation">]</span>
+    <span class="token keyword">then</span>
+        <span class="token keyword">for</span> <span class="token function">file</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> $<span class="token punctuation">{</span>DID_PATH<span class="token punctuation">}</span>/*.txt <span class="token operator">|</span> <span class="token function">sort</span> -Vr<span class="token variable">`</span></span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+            NB_OCCURENCE<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">grep</span> -c @$<span class="token punctuation">{</span>1<span class="token punctuation">}</span> $<span class="token punctuation">{</span>file<span class="token punctuation">}</span><span class="token variable">)</span></span>"</span>
+            <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">${NB_OCCURENCE}</span> <span class="token operator">!=</span> <span class="token string">"0"</span> <span class="token punctuation">]</span>
+            <span class="token keyword">then</span>
+                filenameRaw<span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">basename</span> $<span class="token punctuation">{</span>file<span class="token punctuation">}</span><span class="token variable">)</span></span>"</span>
+                filename<span class="token operator">=</span><span class="token string">"<span class="token variable">${filenameRaw%.*}</span>"</span>
+                <span class="token keyword">echo</span> -e <span class="token string">"\n\e[32m=> <span class="token variable">${filename}</span> (<span class="token variable"><span class="token variable">$(</span>week2Month $<span class="token punctuation">{</span>filename<span class="token punctuation">}</span><span class="token variable">)</span></span>, <span class="token variable">${NB_OCCURENCE}</span> results) \e[0m"</span> <span class="token operator">&amp;&amp;</span> <span class="token function">grep</span> -n -B 1 <span class="token variable">${1}</span> <span class="token variable">${file}</span>
+            <span class="token keyword">fi</span>
+        <span class="token keyword">done</span>
+    <span class="token keyword">else</span>
+         <span class="token keyword">echo</span> <span class="token string">"You must add a something to search..."</span>
+    <span class="token keyword">fi</span>
+    <span class="token function">export</span> LC_ALL<span class="token operator">=</span>C
+<span class="token punctuation">}</span></code></pre></div>
+<br />
+Pour pouvoir taguer les notes et limiter la recherche à ces tags, j'ai décidé d'utiliser un préfixe `@` aux tags, ce qui permet de faire `NB_OCCURENCE="$(grep -c @${1} ${file})"`. Ensuite, l'affichage des résultats n'utilise plus le préfixe, ce qui permet d'afficher les lignes correspondant à la recherche au sein du fichier tagué.
+<p><img src="/images/did/dids_tag.gif" alt="dids"></p>
+<h2>Formater les notes</h2>
+<p>J'y suis presque ! Je n'ai plus une, mais 4 commandes :</p>
+<ul>
+<li><code class="language-text">did</code> pour ouvrir le journal de la semaine à la date du jour;</li>
+<li><code class="language-text">didv</code> pour visualiser un journal, le journal courant par défaut, mais aussi un journal passé,</li>
+<li><code class="language-text">didl</code> pour lister de manière lisible tous les journaux disponibles,</li>
+<li><code class="language-text">dids</code> pour faire une recherche au sein de tous les journaux.</li>
+</ul>
+<p>Mais un point n'est pas encore réglé :</p>
+<blockquote>
+<p> Le fichier est en <code class="language-text">.txt</code>, limitant fortement les possibilités de mise en forme des notes, comme les extraits de code.</p>
+</blockquote>
+<p>Et pour ça, un format de fichier est parfaitement adapté : <a href="https://www.markdownguide.org/"><strong>le markdown</strong></a>.</p>
+<p><img src="/images/did/markdown.jpg" alt="Markdown everywhere"></p>
+<p>Pas de chance, il n'existe aucun outil de base dans ma console permettant d'afficher de traiter et d'afficher un fichier <code class="language-text">.md</code>. Or, je me suis fixé une règle :</p>
+<blockquote>
+<p><em>"..., en continuant à n’utiliser que ce qui était déjà disponible dans la console."</em></p>
+</blockquote>
+<p>Ce n'est pas grave, je suis un punk. J'ai donc trouvé quelques projets répondant au besoin :</p>
+<ul>
+<li><a href="https://tosbourn.com/view-markdown-files-terminal/">Pandoc et Lynx</a></li>
+<li><a href="https://github.com/axiros/terminal_markdown_viewer">mdv</a></li>
+<li><a href="https://github.com/cpascoe95/vmd">vmd</a></li>
+</ul>
+<p>J'ai préféré le rendu de <code class="language-text">vmd</code>, ne restait plus qu'à modifier tous les <code class="language-text">.txt</code> en <code class="language-text">.md</code>, ajouter quelques <code class="language-text">#</code> et remplacer <code class="language-text">cat</code> par <code class="language-text">vmd</code> dans la commande <code class="language-text">didv</code> :</p>
+<p><img src="/images/did/didv_markdown.gif" alt="didv en markdown"></p>
+<h2>Les commandes finales</h2>
+<p><div id="gist90924037" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-zshrc" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-shell ">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="file-zshrc-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-zshrc-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> What did i do today?</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-zshrc-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> from https://theptrk.com/2018/07/11/did-txt-file/</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-zshrc-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> MDV_THEME=729.8953</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-zshrc-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> DID_PATH=<span class="pl-k">~</span>/.did</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-zshrc-LC5" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-zshrc-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">function</span> <span class="pl-en">did(){</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-zshrc-LC7" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">export</span> LC_ALL=C</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-zshrc-LC8" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> [ <span class="pl-k">!</span> <span class="pl-k">-f</span> <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md ]<span class="pl-k">;</span> <span class="pl-k">then</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-zshrc-LC9" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span># Week <span class="pl-s"><span class="pl-pds">$(</span>date +<span class="pl-s"><span class="pl-pds">&quot;</span>%V (%B %Y)<span class="pl-pds">&quot;</span></span><span class="pl-pds">)</span></span> \n\n## <span class="pl-s"><span class="pl-pds">$(</span>date +<span class="pl-s"><span class="pl-pds">&quot;</span>%A %Y-%m-%d<span class="pl-pds">&quot;</span></span><span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span> <span class="pl-k">&gt;</span> <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-zshrc-LC10" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">fi</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-zshrc-LC11" class="blob-code blob-code-inner js-file-line">    FILE_EDITION_DATE=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s"><span class="pl-pds">$(</span>stat -c <span class="pl-s"><span class="pl-pds">&quot;</span>%y<span class="pl-pds">&quot;</span></span>  <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md<span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-zshrc-LC12" class="blob-code blob-code-inner js-file-line">    NOW=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s"><span class="pl-pds">$(</span>date +<span class="pl-s"><span class="pl-pds">&quot;</span>%Y-%m-%d<span class="pl-pds">&quot;</span></span><span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-zshrc-LC13" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> [ <span class="pl-smi">${FILE_EDITION_DATE<span class="pl-k">:</span>0<span class="pl-k">:</span>10}</span> <span class="pl-k">!=</span> <span class="pl-smi">${NOW}</span> ]</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-zshrc-LC14" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">then</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-zshrc-LC15" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>\n## <span class="pl-s"><span class="pl-pds">$(</span>date +<span class="pl-s"><span class="pl-pds">&quot;</span>%A %Y-%m-%d<span class="pl-pds">&quot;</span></span><span class="pl-pds">)</span></span>\n<span class="pl-pds">&quot;</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-zshrc-LC16" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">fi</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-zshrc-LC17" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">unset</span> LC_ALL</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-zshrc-LC18" class="blob-code blob-code-inner js-file-line">    vim +<span class="pl-s"><span class="pl-pds">&#39;</span>normal Go<span class="pl-pds">&#39;</span></span> <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-zshrc-LC19" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-zshrc-LC20" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-zshrc-LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-k">function</span> <span class="pl-en">didv(){</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-zshrc-LC22" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> [ <span class="pl-smi">$1</span> ]</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-zshrc-LC23" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">then</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-zshrc-LC24" class="blob-code blob-code-inner js-file-line">         vmd <span class="pl-smi">${DID_PATH}</span>/<span class="pl-smi">${1}</span>.md</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-zshrc-LC25" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">else</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-zshrc-LC26" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">if</span> [ <span class="pl-k">!</span> <span class="pl-k">-f</span> <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md ]<span class="pl-k">;</span> <span class="pl-k">then</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-zshrc-LC27" class="blob-code blob-code-inner js-file-line">            LC_ALL=C <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span># Week <span class="pl-s"><span class="pl-pds">$(</span>date +<span class="pl-s"><span class="pl-pds">&quot;</span>%V (%B %Y)<span class="pl-pds">&quot;</span></span><span class="pl-pds">)</span></span> \n\n## <span class="pl-s"><span class="pl-pds">$(</span>date +<span class="pl-s"><span class="pl-pds">&quot;</span>%A %Y-%m-%d<span class="pl-pds">&quot;</span></span><span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span> <span class="pl-k">&gt;</span> <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-zshrc-LC28" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">fi</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-zshrc-LC29" class="blob-code blob-code-inner js-file-line">        vmd <span class="pl-smi">${DID_PATH}</span>/<span class="pl-s"><span class="pl-pds">$(</span>date +%Y-%V<span class="pl-pds">)</span></span>.md</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-zshrc-LC30" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">fi</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-zshrc-LC31" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="file-zshrc-LC32" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="file-zshrc-LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-k">function</span> <span class="pl-en">week2Month(){</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="file-zshrc-LC34" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">export</span> LC_ALL=C</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="file-zshrc-LC35" class="blob-code blob-code-inner js-file-line">    year=<span class="pl-s"><span class="pl-pds">$(</span>echo <span class="pl-smi">$1</span> <span class="pl-k">|</span> cut -f1 -d-<span class="pl-pds">)</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="file-zshrc-LC36" class="blob-code blob-code-inner js-file-line">    week=<span class="pl-s"><span class="pl-pds">$(</span>echo <span class="pl-smi">$1</span> <span class="pl-k">|</span> cut -f2 -d-<span class="pl-pds">)</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="file-zshrc-LC37" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">local</span> dayofweek=1 <span class="pl-c"><span class="pl-c">#</span> 1 for monday</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="file-zshrc-LC38" class="blob-code blob-code-inner js-file-line">    date -d <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">$year</span>-01-01 +<span class="pl-s"><span class="pl-pds">$((</span> <span class="pl-smi">$week</span> <span class="pl-k">*</span> <span class="pl-c1">7</span> <span class="pl-k">+</span> <span class="pl-c1">1</span> <span class="pl-k">-</span> $(date <span class="pl-k">-</span>d &quot;<span class="pl-smi">$year</span><span class="pl-k">-</span><span class="pl-c1">01</span><span class="pl-k">-</span><span class="pl-c1">04</span>&quot; <span class="pl-k">+%</span>w ) <span class="pl-k">-</span> <span class="pl-c1">3</span> <span class="pl-pds">))</span></span> days -2 days + <span class="pl-smi">$dayofweek</span> days<span class="pl-pds">&quot;</span></span> +<span class="pl-s"><span class="pl-pds">&quot;</span>%B %Y<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="file-zshrc-LC39" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">unset</span> LC_ALL</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="file-zshrc-LC40" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="file-zshrc-LC41" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="file-zshrc-LC42" class="blob-code blob-code-inner js-file-line"><span class="pl-k">function</span> <span class="pl-en">didl(){</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="file-zshrc-LC43" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> <span class="pl-smi">file</span> <span class="pl-k">in</span> <span class="pl-s"><span class="pl-pds">`</span>ls <span class="pl-smi">${DID_PATH}</span>/<span class="pl-k">*</span>.md <span class="pl-k">|</span> sort -Vr<span class="pl-pds">`</span></span><span class="pl-k">;</span> <span class="pl-k">do</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="file-zshrc-LC44" class="blob-code blob-code-inner js-file-line">        filenameRaw=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s"><span class="pl-pds">$(</span>basename <span class="pl-smi">${file}</span><span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="file-zshrc-LC45" class="blob-code blob-code-inner js-file-line">        filename=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">${filenameRaw<span class="pl-k">%</span>.<span class="pl-k">*</span>}</span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="file-zshrc-LC46" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">${filename}</span> (<span class="pl-s"><span class="pl-pds">$(</span>week2Month <span class="pl-smi">${filename}</span><span class="pl-pds">)</span></span>)<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="file-zshrc-LC47" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">done</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="file-zshrc-LC48" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="file-zshrc-LC49" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="file-zshrc-LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-k">function</span> <span class="pl-en">dids(){</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="file-zshrc-LC51" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">export</span> LC_ALL=C</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="file-zshrc-LC52" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> [ <span class="pl-smi">$1</span> ]</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="file-zshrc-LC53" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">then</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="file-zshrc-LC54" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">for</span> <span class="pl-smi">file</span> <span class="pl-k">in</span> <span class="pl-s"><span class="pl-pds">`</span>ls <span class="pl-smi">${DID_PATH}</span>/<span class="pl-k">*</span>.md <span class="pl-k">|</span> sort -Vr<span class="pl-pds">`</span></span><span class="pl-k">;</span> <span class="pl-k">do</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="file-zshrc-LC55" class="blob-code blob-code-inner js-file-line">            NB_OCCURENCE=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s"><span class="pl-pds">$(</span>grep -c <span class="pl-smi">${1}</span> <span class="pl-smi">${file}</span><span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="file-zshrc-LC56" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">if</span> [ <span class="pl-smi">${NB_OCCURENCE}</span> <span class="pl-k">!=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>0<span class="pl-pds">&quot;</span></span> ]</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="file-zshrc-LC57" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">then</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="file-zshrc-LC58" class="blob-code blob-code-inner js-file-line">                filenameRaw=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s"><span class="pl-pds">$(</span>basename <span class="pl-smi">${file}</span><span class="pl-pds">)</span></span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="file-zshrc-LC59" class="blob-code blob-code-inner js-file-line">                filename=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">${filenameRaw<span class="pl-k">%</span>.<span class="pl-k">*</span>}</span><span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="file-zshrc-LC60" class="blob-code blob-code-inner js-file-line">                <span class="pl-c1">echo</span> -e <span class="pl-s"><span class="pl-pds">&quot;</span>\n\e[32m=&gt; <span class="pl-smi">${filename}</span> (<span class="pl-s"><span class="pl-pds">$(</span>week2Month <span class="pl-smi">${filename}</span><span class="pl-pds">)</span></span>, <span class="pl-smi">${NB_OCCURENCE}</span> results) \e[0m<span class="pl-pds">&quot;</span></span> <span class="pl-k">&amp;&amp;</span> grep -n -B 1 <span class="pl-smi">${1}</span> <span class="pl-smi">${file}</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="file-zshrc-LC61" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">fi</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="file-zshrc-LC62" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">done</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="file-zshrc-LC63" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">else</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="file-zshrc-LC64" class="blob-code blob-code-inner js-file-line">         <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>You must add a something to search...<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="file-zshrc-LC65" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">fi</span></td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="file-zshrc-LC66" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">export</span> LC_ALL=C</td>
+      </tr>
+      <tr>
+        <td id="file-zshrc-L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="file-zshrc-LC67" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/alexisjanvier/bfe71d18f68434e29c08637e4d837c74/raw/56419c71bfefaa1956e09e2ea1c6867e37efae66/.zshrc" style="float:right">view raw</a>
+        <a href="https://gist.github.com/alexisjanvier/bfe71d18f68434e29c08637e4d837c74#file-zshrc">.zshrc</a>
+        hosted with &#10084; by <a href="https://github.com">GitHub</a>
+      </div>
+    </div>
+</div>
+</p>
+<h2>Conclusion</h2>
+<p>Je ne sais pas si mon script peut vous servir. Si oui, j'en serais content. Sinon, je serais content tout de même .</p>
+<p>Car ce n'est pas le script qui est important ici. Ce que j'aimerais avoir transmis dans ce post, c'est le plaisir pris à construire son propre petit outil à partir de ce qui est disponible sur son système. C'est vraiment très ludique ! Durant cette journée passée à modifier le did.txt initial, j'ai beaucoup appris, beaucoup testé et je suis arrivé au bout du compte à un résultat correspondant exactement à ce dont j'avais besoin. Pas plus, pas moins. C'était un peu du <strong>low-dev</strong> (je suis très sensible en ce moment aux <a href="https://www.arte.tv/fr/videos/RC-016865/les-escales-de-l-innovation/RC-014864/nomade-des-mers-les-tutos/">low-tech</a>).</p>
+<p>Alors j'espère que cette lecture vous aura donné des idées. En ce qui me concerne, je pense m'attaquer rapidement à une commande <code class="language-text">didp</code>. </p>
+<p>Vous avez deviné ? <code class="language-text">p</code> pour publish ! Maintenant que j'ai des journaux en markdown, cela ne devrait pas être très compliqué de les publier sur un serveur, et les faire indexer par un moteur de recherche comme <a href="https://www.algolia.com/products/search">Algolia</a>.</p></div></div></div></header></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"journal-intime-dun-developpeur-fe3","path":"/journal-intime-dun-developpeur"};window.dataPath="119/path---journal-intime-dun-developpeur-fe-3-a8b-sBlnz390IDipwEjxiNTpjcSTIc0";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-16d753f7623b9101d414.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js.8561d3a56fd02900d3af.css","/component---src-templates-blog-post-js-c55e6c8c71955cf242f5.js"],"component---src-pages-about-js":["/component---src-pages-about-js.8561d3a56fd02900d3af.css","/component---src-pages-about-js-447a6fc9c38234f48553.js"],"component---src-pages-index-js":["/component---src-pages-index-js.8561d3a56fd02900d3af.css","/component---src-pages-index-js-f1cee1630a3743c026c0.js"]};/*]]>*/</script><script src="/webpack-runtime-09ef8c2fe406c7d1cdc2.js" async=""></script><script src="/0-c860f96b84aa7c7b5ed5.js" async=""></script><script src="/1-9c09af5d63ec6fe29a96.js" async=""></script><script src="/component---src-templates-blog-post-js-c55e6c8c71955cf242f5.js" async=""></script><script src="/app-16d753f7623b9101d414.js" async=""></script></body></html>
