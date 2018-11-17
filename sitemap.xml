@@ -25,7 +25,7 @@
 <url> <loc>http://alexisjanvier.net/avec-ou-sans-redux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/journal-intime-dun-developpeur</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/a-developers-diary-building-a-notes-taking-app-in-shell</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://alexisjanvier.net/managing-state-in-react-redux-or-not-redux?</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://alexisjanvier.net/managing-state-in-react-redux-or-not-redux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
