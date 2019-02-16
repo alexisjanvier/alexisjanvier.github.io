@@ -8,7 +8,6 @@
 <url> <loc>http://alexisjanvier.net/bind-user-on-docker-container</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/is-it-snobbery-to-want-a-real-console-on-windows</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/gasby-avec-docker</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://alexisjanvier.net/un-serveur-en-deux-deux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/happy-nodejs-1100-day</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/applications-12-facteurs-comment-validez-vous-votre-configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/du-php-au-go-une-semaine-pour-realiser-un-produit-fonctionnel</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -28,6 +27,7 @@
 <url> <loc>http://alexisjanvier.net/avec-ou-sans-redux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/managing-state-in-react-redux-or-not-redux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/visual-studio-live-share-cest-de-la-balle</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://alexisjanvier.net/un-serveur-en-deux-deux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://alexisjanvier.net/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
